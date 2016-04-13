@@ -18,15 +18,22 @@
 #pragma mark -
 #pragma mark 创建抽屉库
 -(void)createDrawer{
-    MMDrawerController * drawer = [[MMDrawerController alloc] initWithCenterViewController:[[UIViewController alloc] init] leftDrawerViewController:[[UIViewController alloc] init] rightDrawerViewController:nil];
+    UIViewController * center = [[UIViewController alloc] init];
+    center.view.backgroundColor = [UIColor redColor];
+    
+    UIViewController * left = [[UIViewController alloc] init];
+    left.view.backgroundColor = [UIColor blueColor];
+    
+    MMDrawerController * drawer = [[MMDrawerController alloc] initWithCenterViewController:center leftDrawerViewController:left rightDrawerViewController:nil];
     drawer.maximumLeftDrawerWidth = SCREEN_WIDTH*5.0/7.0;
-    [drawer setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeCustom];
+    [drawer setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [drawer setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
     self.window.rootViewController = drawer;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self createDrawer];
     return YES;
 }
 
