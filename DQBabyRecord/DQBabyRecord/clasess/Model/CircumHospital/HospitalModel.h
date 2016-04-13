@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface HospitalModel : NSObject
 @property(nonatomic,assign)NSInteger ID;/**<id*/

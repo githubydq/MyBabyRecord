@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <MMDrawerController.h>
 
 @interface AppDelegate ()
 
@@ -14,6 +15,15 @@
 
 @implementation AppDelegate
 
+#pragma mark -
+#pragma mark 创建抽屉库
+-(void)createDrawer{
+    MMDrawerController * drawer = [[MMDrawerController alloc] initWithCenterViewController:[[UIViewController alloc] init] leftDrawerViewController:[[UIViewController alloc] init] rightDrawerViewController:nil];
+    drawer.maximumLeftDrawerWidth = SCREEN_WIDTH*5.0/7.0;
+    [drawer setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeCustom];
+    [drawer setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    self.window.rootViewController = drawer;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
