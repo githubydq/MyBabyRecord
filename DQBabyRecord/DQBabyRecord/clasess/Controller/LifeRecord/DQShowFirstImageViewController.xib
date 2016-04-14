@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DQShowFirstImageViewController">
+            <connections>
+                <outlet property="scroll" destination="zI7-Yd-5hk" id="UVS-iN-ymp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zI7-Yd-5hk">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="zI7-Yd-5hk" secondAttribute="bottom" id="0Uj-d2-9yw"/>
+                <constraint firstItem="zI7-Yd-5hk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="A5y-NT-OWo"/>
+                <constraint firstItem="zI7-Yd-5hk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GWR-lF-Pmm">
+                    <variation key="widthClass=compact" constant="64"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="zI7-Yd-5hk" secondAttribute="trailing" id="Oen-4E-J3u"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="zI7-Yd-5hk"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="0Uj-d2-9yw"/>
+                    <exclude reference="A5y-NT-OWo"/>
+                    <exclude reference="GWR-lF-Pmm"/>
+                    <exclude reference="Oen-4E-J3u"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="zI7-Yd-5hk"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="0Uj-d2-9yw"/>
+                    <include reference="A5y-NT-OWo"/>
+                    <include reference="GWR-lF-Pmm"/>
+                    <include reference="Oen-4E-J3u"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="229" y="168"/>
+        </view>
+    </objects>
+</document>

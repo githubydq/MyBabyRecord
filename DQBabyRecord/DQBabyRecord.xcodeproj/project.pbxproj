@@ -9,6 +9,58 @@
 /* Begin PBXBuildFile section */
 		3003D9ED4B439C4441C9603F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D2DD2BEDF5203F5B5E237 /* libPods.a */; };
 		B32AE4BE1CBEA09A00E9ED91 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B32AE4BD1CBEA09A00E9ED91 /* Info.plist */; };
+		B35A1C5D1CBF40C2000A7BFC /* AddCaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C261CBF40C2000A7BFC /* AddCaseViewController.m */; };
+		B35A1C5E1CBF40C2000A7BFC /* AddCaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C271CBF40C2000A7BFC /* AddCaseViewController.xib */; };
+		B35A1C5F1CBF40C2000A7BFC /* AddFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C291CBF40C2000A7BFC /* AddFirstViewController.m */; };
+		B35A1C601CBF40C2000A7BFC /* AddFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C2A1CBF40C2000A7BFC /* AddFirstViewController.xib */; };
+		B35A1C611CBF40C2000A7BFC /* AddHWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C2C1CBF40C2000A7BFC /* AddHWViewController.m */; };
+		B35A1C621CBF40C2000A7BFC /* AddHWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C2D1CBF40C2000A7BFC /* AddHWViewController.xib */; };
+		B35A1C631CBF40C2000A7BFC /* AddImageRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C2F1CBF40C2000A7BFC /* AddImageRecordViewController.m */; };
+		B35A1C641CBF40C2000A7BFC /* AddImageRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C301CBF40C2000A7BFC /* AddImageRecordViewController.xib */; };
+		B35A1C651CBF40C2000A7BFC /* AddMultiRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C321CBF40C2000A7BFC /* AddMultiRecordViewController.m */; };
+		B35A1C661CBF40C2000A7BFC /* AddMultiRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C331CBF40C2000A7BFC /* AddMultiRecordViewController.xib */; };
+		B35A1C671CBF40C2000A7BFC /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C361CBF40C2000A7BFC /* BaseNavigationController.m */; };
+		B35A1C681CBF40C2000A7BFC /* BabyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C391CBF40C2000A7BFC /* BabyInfoViewController.m */; };
+		B35A1C691CBF40C2000A7BFC /* BabyInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C3A1CBF40C2000A7BFC /* BabyInfoViewController.xib */; };
+		B35A1C6A1CBF40C2000A7BFC /* LeftDrawerRemindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C3C1CBF40C2000A7BFC /* LeftDrawerRemindViewController.m */; };
+		B35A1C6B1CBF40C2000A7BFC /* LeftDrawerRemindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C3D1CBF40C2000A7BFC /* LeftDrawerRemindViewController.xib */; };
+		B35A1C6C1CBF40C2000A7BFC /* LeftDrawerSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C3F1CBF40C2000A7BFC /* LeftDrawerSetViewController.m */; };
+		B35A1C6D1CBF40C2000A7BFC /* LeftDrawerSetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C401CBF40C2000A7BFC /* LeftDrawerSetViewController.xib */; };
+		B35A1C6E1CBF40C2000A7BFC /* LeftDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C421CBF40C2000A7BFC /* LeftDrawerViewController.m */; };
+		B35A1C6F1CBF40C2000A7BFC /* LeftDrawerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C431CBF40C2000A7BFC /* LeftDrawerViewController.xib */; };
+		B35A1C701CBF40C2000A7BFC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C451CBF40C2000A7BFC /* MainViewController.m */; };
+		B35A1C711CBF40C2000A7BFC /* DQShowFirstImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C481CBF40C2000A7BFC /* DQShowFirstImageViewController.m */; };
+		B35A1C721CBF40C2000A7BFC /* DQShowFirstImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C491CBF40C2000A7BFC /* DQShowFirstImageViewController.xib */; };
+		B35A1C731CBF40C2000A7BFC /* DQShowFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C4B1CBF40C2000A7BFC /* DQShowFirstViewController.m */; };
+		B35A1C741CBF40C2000A7BFC /* DQShowFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C4C1CBF40C2000A7BFC /* DQShowFirstViewController.xib */; };
+		B35A1C751CBF40C2000A7BFC /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C4E1CBF40C2000A7BFC /* RecordViewController.m */; };
+		B35A1C761CBF40C2000A7BFC /* RecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C4F1CBF40C2000A7BFC /* RecordViewController.xib */; };
+		B35A1C771CBF40C2000A7BFC /* CircumHospitalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C521CBF40C2000A7BFC /* CircumHospitalViewController.m */; };
+		B35A1C781CBF40C2000A7BFC /* CircumHospitalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C531CBF40C2000A7BFC /* CircumHospitalViewController.xib */; };
+		B35A1C791CBF40C2000A7BFC /* HospitalMapKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C551CBF40C2000A7BFC /* HospitalMapKitViewController.m */; };
+		B35A1C7A1CBF40C2000A7BFC /* HospitalMapKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C561CBF40C2000A7BFC /* HospitalMapKitViewController.xib */; };
+		B35A1C7B1CBF40C2000A7BFC /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C581CBF40C2000A7BFC /* MoreViewController.m */; };
+		B35A1C7C1CBF40C2000A7BFC /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C591CBF40C2000A7BFC /* MoreViewController.xib */; };
+		B35A1C7D1CBF40C2000A7BFC /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C5B1CBF40C2000A7BFC /* WeatherViewController.m */; };
+		B35A1C7E1CBF40C2000A7BFC /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C5C1CBF40C2000A7BFC /* WeatherViewController.xib */; };
+		B35A1CA41CBF413C000A7BFC /* AddRecordChoiceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C811CBF413C000A7BFC /* AddRecordChoiceItem.m */; };
+		B35A1CA51CBF413C000A7BFC /* AddRecordChoiceItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C821CBF413C000A7BFC /* AddRecordChoiceItem.xib */; };
+		B35A1CA61CBF413C000A7BFC /* RecordCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C851CBF413C000A7BFC /* RecordCollectionViewCell.m */; };
+		B35A1CA71CBF413C000A7BFC /* RecordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C861CBF413C000A7BFC /* RecordCollectionViewCell.xib */; };
+		B35A1CA81CBF413C000A7BFC /* AddBabyBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C891CBF413C000A7BFC /* AddBabyBaseView.m */; };
+		B35A1CA91CBF413C000A7BFC /* AddBabyView.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C8B1CBF413C000A7BFC /* AddBabyView.m */; };
+		B35A1CAA1CBF413C000A7BFC /* RemindTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C8E1CBF413C000A7BFC /* RemindTableViewCell.m */; };
+		B35A1CAB1CBF413C000A7BFC /* RemindTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C8F1CBF413C000A7BFC /* RemindTableViewCell.xib */; };
+		B35A1CAC1CBF413C000A7BFC /* CircumHospitalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C921CBF413C000A7BFC /* CircumHospitalTableViewCell.m */; };
+		B35A1CAD1CBF413C000A7BFC /* CircumHospitalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C931CBF413C000A7BFC /* CircumHospitalTableViewCell.xib */; };
+		B35A1CAE1CBF413C000A7BFC /* WeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C951CBF413C000A7BFC /* WeatherView.m */; };
+		B35A1CAF1CBF413C000A7BFC /* DQFirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C981CBF413C000A7BFC /* DQFirstTableViewCell.m */; };
+		B35A1CB01CBF413C000A7BFC /* DQFirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C991CBF413C000A7BFC /* DQFirstTableViewCell.xib */; };
+		B35A1CB11CBF413C000A7BFC /* DQMyCaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C9B1CBF413C000A7BFC /* DQMyCaseTableViewCell.m */; };
+		B35A1CB21CBF413C000A7BFC /* DQMyCaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C9C1CBF413C000A7BFC /* DQMyCaseTableViewCell.xib */; };
+		B35A1CB31CBF413C000A7BFC /* DQHWView.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C9F1CBF413C000A7BFC /* DQHWView.m */; };
+		B35A1CB41CBF413C000A7BFC /* MultiSelectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1CA11CBF413C000A7BFC /* MultiSelectButton.m */; };
+		B35A1CB51CBF413C000A7BFC /* SquareRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1CA31CBF413C000A7BFC /* SquareRadioButton.m */; };
 		B3955D041CBE94A400E6F9B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3955CFA1CBE94A400E6F9B1 /* AppDelegate.m */; };
 		B3955D051CBE94A400E6F9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3955CFB1CBE94A400E6F9B1 /* Assets.xcassets */; };
 		B3955D061CBE94A400E6F9B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3955CFC1CBE94A400E6F9B1 /* LaunchScreen.storyboard */; };
@@ -35,6 +87,88 @@
 		831D2DD2BEDF5203F5B5E237 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32AE4BC1CBE9E8900E9ED91 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B32AE4BD1CBEA09A00E9ED91 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B35A1C251CBF40C2000A7BFC /* AddCaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCaseViewController.h; sourceTree = "<group>"; };
+		B35A1C261CBF40C2000A7BFC /* AddCaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCaseViewController.m; sourceTree = "<group>"; };
+		B35A1C271CBF40C2000A7BFC /* AddCaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCaseViewController.xib; sourceTree = "<group>"; };
+		B35A1C281CBF40C2000A7BFC /* AddFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFirstViewController.h; sourceTree = "<group>"; };
+		B35A1C291CBF40C2000A7BFC /* AddFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFirstViewController.m; sourceTree = "<group>"; };
+		B35A1C2A1CBF40C2000A7BFC /* AddFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFirstViewController.xib; sourceTree = "<group>"; };
+		B35A1C2B1CBF40C2000A7BFC /* AddHWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddHWViewController.h; sourceTree = "<group>"; };
+		B35A1C2C1CBF40C2000A7BFC /* AddHWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddHWViewController.m; sourceTree = "<group>"; };
+		B35A1C2D1CBF40C2000A7BFC /* AddHWViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddHWViewController.xib; sourceTree = "<group>"; };
+		B35A1C2E1CBF40C2000A7BFC /* AddImageRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddImageRecordViewController.h; sourceTree = "<group>"; };
+		B35A1C2F1CBF40C2000A7BFC /* AddImageRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddImageRecordViewController.m; sourceTree = "<group>"; };
+		B35A1C301CBF40C2000A7BFC /* AddImageRecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddImageRecordViewController.xib; sourceTree = "<group>"; };
+		B35A1C311CBF40C2000A7BFC /* AddMultiRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMultiRecordViewController.h; sourceTree = "<group>"; };
+		B35A1C321CBF40C2000A7BFC /* AddMultiRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMultiRecordViewController.m; sourceTree = "<group>"; };
+		B35A1C331CBF40C2000A7BFC /* AddMultiRecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddMultiRecordViewController.xib; sourceTree = "<group>"; };
+		B35A1C351CBF40C2000A7BFC /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		B35A1C361CBF40C2000A7BFC /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		B35A1C381CBF40C2000A7BFC /* BabyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyInfoViewController.h; sourceTree = "<group>"; };
+		B35A1C391CBF40C2000A7BFC /* BabyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyInfoViewController.m; sourceTree = "<group>"; };
+		B35A1C3A1CBF40C2000A7BFC /* BabyInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BabyInfoViewController.xib; sourceTree = "<group>"; };
+		B35A1C3B1CBF40C2000A7BFC /* LeftDrawerRemindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDrawerRemindViewController.h; sourceTree = "<group>"; };
+		B35A1C3C1CBF40C2000A7BFC /* LeftDrawerRemindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftDrawerRemindViewController.m; sourceTree = "<group>"; };
+		B35A1C3D1CBF40C2000A7BFC /* LeftDrawerRemindViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftDrawerRemindViewController.xib; sourceTree = "<group>"; };
+		B35A1C3E1CBF40C2000A7BFC /* LeftDrawerSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDrawerSetViewController.h; sourceTree = "<group>"; };
+		B35A1C3F1CBF40C2000A7BFC /* LeftDrawerSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftDrawerSetViewController.m; sourceTree = "<group>"; };
+		B35A1C401CBF40C2000A7BFC /* LeftDrawerSetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftDrawerSetViewController.xib; sourceTree = "<group>"; };
+		B35A1C411CBF40C2000A7BFC /* LeftDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDrawerViewController.h; sourceTree = "<group>"; };
+		B35A1C421CBF40C2000A7BFC /* LeftDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftDrawerViewController.m; sourceTree = "<group>"; };
+		B35A1C431CBF40C2000A7BFC /* LeftDrawerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftDrawerViewController.xib; sourceTree = "<group>"; };
+		B35A1C441CBF40C2000A7BFC /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		B35A1C451CBF40C2000A7BFC /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		B35A1C471CBF40C2000A7BFC /* DQShowFirstImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQShowFirstImageViewController.h; sourceTree = "<group>"; };
+		B35A1C481CBF40C2000A7BFC /* DQShowFirstImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQShowFirstImageViewController.m; sourceTree = "<group>"; };
+		B35A1C491CBF40C2000A7BFC /* DQShowFirstImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQShowFirstImageViewController.xib; sourceTree = "<group>"; };
+		B35A1C4A1CBF40C2000A7BFC /* DQShowFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQShowFirstViewController.h; sourceTree = "<group>"; };
+		B35A1C4B1CBF40C2000A7BFC /* DQShowFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQShowFirstViewController.m; sourceTree = "<group>"; };
+		B35A1C4C1CBF40C2000A7BFC /* DQShowFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQShowFirstViewController.xib; sourceTree = "<group>"; };
+		B35A1C4D1CBF40C2000A7BFC /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		B35A1C4E1CBF40C2000A7BFC /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
+		B35A1C4F1CBF40C2000A7BFC /* RecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordViewController.xib; sourceTree = "<group>"; };
+		B35A1C511CBF40C2000A7BFC /* CircumHospitalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircumHospitalViewController.h; sourceTree = "<group>"; };
+		B35A1C521CBF40C2000A7BFC /* CircumHospitalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircumHospitalViewController.m; sourceTree = "<group>"; };
+		B35A1C531CBF40C2000A7BFC /* CircumHospitalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircumHospitalViewController.xib; sourceTree = "<group>"; };
+		B35A1C541CBF40C2000A7BFC /* HospitalMapKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalMapKitViewController.h; sourceTree = "<group>"; };
+		B35A1C551CBF40C2000A7BFC /* HospitalMapKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalMapKitViewController.m; sourceTree = "<group>"; };
+		B35A1C561CBF40C2000A7BFC /* HospitalMapKitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalMapKitViewController.xib; sourceTree = "<group>"; };
+		B35A1C571CBF40C2000A7BFC /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		B35A1C581CBF40C2000A7BFC /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		B35A1C591CBF40C2000A7BFC /* MoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
+		B35A1C5A1CBF40C2000A7BFC /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		B35A1C5B1CBF40C2000A7BFC /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
+		B35A1C5C1CBF40C2000A7BFC /* WeatherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherViewController.xib; sourceTree = "<group>"; };
+		B35A1C801CBF413C000A7BFC /* AddRecordChoiceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRecordChoiceItem.h; sourceTree = "<group>"; };
+		B35A1C811CBF413C000A7BFC /* AddRecordChoiceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRecordChoiceItem.m; sourceTree = "<group>"; };
+		B35A1C821CBF413C000A7BFC /* AddRecordChoiceItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddRecordChoiceItem.xib; sourceTree = "<group>"; };
+		B35A1C841CBF413C000A7BFC /* RecordCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordCollectionViewCell.h; sourceTree = "<group>"; };
+		B35A1C851CBF413C000A7BFC /* RecordCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordCollectionViewCell.m; sourceTree = "<group>"; };
+		B35A1C861CBF413C000A7BFC /* RecordCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordCollectionViewCell.xib; sourceTree = "<group>"; };
+		B35A1C881CBF413C000A7BFC /* AddBabyBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBabyBaseView.h; sourceTree = "<group>"; };
+		B35A1C891CBF413C000A7BFC /* AddBabyBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBabyBaseView.m; sourceTree = "<group>"; };
+		B35A1C8A1CBF413C000A7BFC /* AddBabyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBabyView.h; sourceTree = "<group>"; };
+		B35A1C8B1CBF413C000A7BFC /* AddBabyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBabyView.m; sourceTree = "<group>"; };
+		B35A1C8D1CBF413C000A7BFC /* RemindTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindTableViewCell.h; sourceTree = "<group>"; };
+		B35A1C8E1CBF413C000A7BFC /* RemindTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindTableViewCell.m; sourceTree = "<group>"; };
+		B35A1C8F1CBF413C000A7BFC /* RemindTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemindTableViewCell.xib; sourceTree = "<group>"; };
+		B35A1C911CBF413C000A7BFC /* CircumHospitalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircumHospitalTableViewCell.h; sourceTree = "<group>"; };
+		B35A1C921CBF413C000A7BFC /* CircumHospitalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircumHospitalTableViewCell.m; sourceTree = "<group>"; };
+		B35A1C931CBF413C000A7BFC /* CircumHospitalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircumHospitalTableViewCell.xib; sourceTree = "<group>"; };
+		B35A1C941CBF413C000A7BFC /* WeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherView.h; sourceTree = "<group>"; };
+		B35A1C951CBF413C000A7BFC /* WeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherView.m; sourceTree = "<group>"; };
+		B35A1C971CBF413C000A7BFC /* DQFirstTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQFirstTableViewCell.h; sourceTree = "<group>"; };
+		B35A1C981CBF413C000A7BFC /* DQFirstTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQFirstTableViewCell.m; sourceTree = "<group>"; };
+		B35A1C991CBF413C000A7BFC /* DQFirstTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQFirstTableViewCell.xib; sourceTree = "<group>"; };
+		B35A1C9A1CBF413C000A7BFC /* DQMyCaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQMyCaseTableViewCell.h; sourceTree = "<group>"; };
+		B35A1C9B1CBF413C000A7BFC /* DQMyCaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQMyCaseTableViewCell.m; sourceTree = "<group>"; };
+		B35A1C9C1CBF413C000A7BFC /* DQMyCaseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQMyCaseTableViewCell.xib; sourceTree = "<group>"; };
+		B35A1C9E1CBF413C000A7BFC /* DQHWView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQHWView.h; sourceTree = "<group>"; };
+		B35A1C9F1CBF413C000A7BFC /* DQHWView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQHWView.m; sourceTree = "<group>"; };
+		B35A1CA01CBF413C000A7BFC /* MultiSelectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectButton.h; sourceTree = "<group>"; };
+		B35A1CA11CBF413C000A7BFC /* MultiSelectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectButton.m; sourceTree = "<group>"; };
+		B35A1CA21CBF413C000A7BFC /* SquareRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareRadioButton.h; sourceTree = "<group>"; };
+		B35A1CA31CBF413C000A7BFC /* SquareRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareRadioButton.m; sourceTree = "<group>"; };
 		B3955CDE1CBE918F00E6F9B1 /* DQBabyRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DQBabyRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3955CF91CBE94A400E6F9B1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3955CFA1CBE94A400E6F9B1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -105,6 +239,172 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B35A1C241CBF40C2000A7BFC /* AddRecord */ = {
+			isa = PBXGroup;
+			children = (
+				B35A1C251CBF40C2000A7BFC /* AddCaseViewController.h */,
+				B35A1C261CBF40C2000A7BFC /* AddCaseViewController.m */,
+				B35A1C271CBF40C2000A7BFC /* AddCaseViewController.xib */,
+				B35A1C281CBF40C2000A7BFC /* AddFirstViewController.h */,
+				B35A1C291CBF40C2000A7BFC /* AddFirstViewController.m */,
+				B35A1C2A1CBF40C2000A7BFC /* AddFirstViewController.xib */,
+				B35A1C2B1CBF40C2000A7BFC /* AddHWViewController.h */,
+				B35A1C2C1CBF40C2000A7BFC /* AddHWViewController.m */,
+				B35A1C2D1CBF40C2000A7BFC /* AddHWViewController.xib */,
+				B35A1C2E1CBF40C2000A7BFC /* AddImageRecordViewController.h */,
+				B35A1C2F1CBF40C2000A7BFC /* AddImageRecordViewController.m */,
+				B35A1C301CBF40C2000A7BFC /* AddImageRecordViewController.xib */,
+				B35A1C311CBF40C2000A7BFC /* AddMultiRecordViewController.h */,
+				B35A1C321CBF40C2000A7BFC /* AddMultiRecordViewController.m */,
+				B35A1C331CBF40C2000A7BFC /* AddMultiRecordViewController.xib */,
+			);
+			path = AddRecord;
+			sourceTree = "<group>";
+		};
+		B35A1C341CBF40C2000A7BFC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B35A1C351CBF40C2000A7BFC /* BaseNavigationController.h */,
+				B35A1C361CBF40C2000A7BFC /* BaseNavigationController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B35A1C371CBF40C2000A7BFC /* Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				B35A1C381CBF40C2000A7BFC /* BabyInfoViewController.h */,
+				B35A1C391CBF40C2000A7BFC /* BabyInfoViewController.m */,
+				B35A1C3A1CBF40C2000A7BFC /* BabyInfoViewController.xib */,
+				B35A1C3B1CBF40C2000A7BFC /* LeftDrawerRemindViewController.h */,
+				B35A1C3C1CBF40C2000A7BFC /* LeftDrawerRemindViewController.m */,
+				B35A1C3D1CBF40C2000A7BFC /* LeftDrawerRemindViewController.xib */,
+				B35A1C3E1CBF40C2000A7BFC /* LeftDrawerSetViewController.h */,
+				B35A1C3F1CBF40C2000A7BFC /* LeftDrawerSetViewController.m */,
+				B35A1C401CBF40C2000A7BFC /* LeftDrawerSetViewController.xib */,
+				B35A1C411CBF40C2000A7BFC /* LeftDrawerViewController.h */,
+				B35A1C421CBF40C2000A7BFC /* LeftDrawerViewController.m */,
+				B35A1C431CBF40C2000A7BFC /* LeftDrawerViewController.xib */,
+				B35A1C441CBF40C2000A7BFC /* MainViewController.h */,
+				B35A1C451CBF40C2000A7BFC /* MainViewController.m */,
+			);
+			path = Drawer;
+			sourceTree = "<group>";
+		};
+		B35A1C461CBF40C2000A7BFC /* LifeRecord */ = {
+			isa = PBXGroup;
+			children = (
+				B35A1C471CBF40C2000A7BFC /* DQShowFirstImageViewController.h */,
+				B35A1C481CBF40C2000A7BFC /* DQShowFirstImageViewController.m */,
+				B35A1C491CBF40C2000A7BFC /* DQShowFirstImageViewController.xib */,
+				B35A1C4A1CBF40C2000A7BFC /* DQShowFirstViewController.h */,
+				B35A1C4B1CBF40C2000A7BFC /* DQShowFirstViewController.m */,
+				B35A1C4C1CBF40C2000A7BFC /* DQShowFirstViewController.xib */,
+				B35A1C4D1CBF40C2000A7BFC /* RecordViewController.h */,
+				B35A1C4E1CBF40C2000A7BFC /* RecordViewController.m */,
+				B35A1C4F1CBF40C2000A7BFC /* RecordViewController.xib */,
+			);
+			path = LifeRecord;
+			sourceTree = "<group>";
+		};
+		B35A1C501CBF40C2000A7BFC /* More */ = {
+			isa = PBXGroup;
+			children = (
+				B35A1C511CBF40C2000A7BFC /* CircumHospitalViewController.h */,
+				B35A1C521CBF40C2000A7BFC /* CircumHospitalViewController.m */,
+				B35A1C531CBF40C2000A7BFC /* CircumHospitalViewController.xib */,
+				B35A1C541CBF40C2000A7BFC /* HospitalMapKitViewController.h */,
+				B35A1C551CBF40C2000A7BFC /* HospitalMapKitViewController.m */,
+				B35A1C561CBF40C2000A7BFC /* HospitalMapKitViewController.xib */,
+				B35A1C571CBF40C2000A7BFC /* MoreViewController.h */,
+				B35A1C581CBF40C2000A7BFC /* MoreViewController.m */,
+				B35A1C591CBF40C2000A7BFC /* MoreViewController.xib */,
+				B35A1C5A1CBF40C2000A7BFC /* WeatherViewController.h */,
+				B35A1C5B1CBF40C2000A7BFC /* WeatherViewController.m */,
+				B35A1C5C1CBF40C2000A7BFC /* WeatherViewController.xib */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		B35A1C7F1CBF413C000A7BFC /* AddRecord */ = {
+			isa = PBXGroup;
+			children = (
+				B35A1C801CBF413C000A7BFC /* AddRecordChoiceItem.h */,
+				B35A1C811CBF413C000A7BFC /* AddRecordChoiceItem.m */,
+				B35A1C821CBF413C000A7BFC /* AddRecordChoiceItem.xib */,
+			);
+			path = AddRecord;
+			sourceTree = "<group>";
+		};
+		B35A1C831CBF413C000A7BFC /* collectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				B35A1C841CBF413C000A7BFC /* RecordCollectionViewCell.h */,
+				B35A1C851CBF413C000A7BFC /* RecordCollectionViewCell.m */,
+				B35A1C861CBF413C000A7BFC /* RecordCollectionViewCell.xib */,
+			);
+			path = collectionViewCells;
+			sourceTree = "<group>";
+		};
+		B35A1C871CBF413C000A7BFC /* initAddBabyView */ = {
+			isa = PBXGroup;
+			children = (
+				B35A1C881CBF413C000A7BFC /* AddBabyBaseView.h */,
+				B35A1C891CBF413C000A7BFC /* AddBabyBaseView.m */,
+				B35A1C8A1CBF413C000A7BFC /* AddBabyView.h */,
+				B35A1C8B1CBF413C000A7BFC /* AddBabyView.m */,
+			);
+			path = initAddBabyView;
+			sourceTree = "<group>";
+		};
+		B35A1C8C1CBF413C000A7BFC /* LeftDrawer */ = {
+			isa = PBXGroup;
+			children = (
+				B35A1C8D1CBF413C000A7BFC /* RemindTableViewCell.h */,
+				B35A1C8E1CBF413C000A7BFC /* RemindTableViewCell.m */,
+				B35A1C8F1CBF413C000A7BFC /* RemindTableViewCell.xib */,
+			);
+			path = LeftDrawer;
+			sourceTree = "<group>";
+		};
+		B35A1C901CBF413C000A7BFC /* More */ = {
+			isa = PBXGroup;
+			children = (
+				B35A1C911CBF413C000A7BFC /* CircumHospitalTableViewCell.h */,
+				B35A1C921CBF413C000A7BFC /* CircumHospitalTableViewCell.m */,
+				B35A1C931CBF413C000A7BFC /* CircumHospitalTableViewCell.xib */,
+				B35A1C941CBF413C000A7BFC /* WeatherView.h */,
+				B35A1C951CBF413C000A7BFC /* WeatherView.m */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		B35A1C961CBF413C000A7BFC /* tableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				B35A1C971CBF413C000A7BFC /* DQFirstTableViewCell.h */,
+				B35A1C981CBF413C000A7BFC /* DQFirstTableViewCell.m */,
+				B35A1C991CBF413C000A7BFC /* DQFirstTableViewCell.xib */,
+				B35A1C9A1CBF413C000A7BFC /* DQMyCaseTableViewCell.h */,
+				B35A1C9B1CBF413C000A7BFC /* DQMyCaseTableViewCell.m */,
+				B35A1C9C1CBF413C000A7BFC /* DQMyCaseTableViewCell.xib */,
+			);
+			path = tableViewCells;
+			sourceTree = "<group>";
+		};
+		B35A1C9D1CBF413C000A7BFC /* uiview */ = {
+			isa = PBXGroup;
+			children = (
+				B35A1C9E1CBF413C000A7BFC /* DQHWView.h */,
+				B35A1C9F1CBF413C000A7BFC /* DQHWView.m */,
+				B35A1CA01CBF413C000A7BFC /* MultiSelectButton.h */,
+				B35A1CA11CBF413C000A7BFC /* MultiSelectButton.m */,
+				B35A1CA21CBF413C000A7BFC /* SquareRadioButton.h */,
+				B35A1CA31CBF413C000A7BFC /* SquareRadioButton.m */,
+			);
+			path = uiview;
+			sourceTree = "<group>";
+		};
 		B3955CD51CBE918E00E6F9B1 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +470,11 @@
 		B3955D0C1CBE95D000E6F9B1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B35A1C241CBF40C2000A7BFC /* AddRecord */,
+				B35A1C341CBF40C2000A7BFC /* Base */,
+				B35A1C371CBF40C2000A7BFC /* Drawer */,
+				B35A1C461CBF40C2000A7BFC /* LifeRecord */,
+				B35A1C501CBF40C2000A7BFC /* More */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,6 +549,13 @@
 		B3955D2E1CBE95D000E6F9B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B35A1C7F1CBF413C000A7BFC /* AddRecord */,
+				B35A1C831CBF413C000A7BFC /* collectionViewCells */,
+				B35A1C871CBF413C000A7BFC /* initAddBabyView */,
+				B35A1C8C1CBF413C000A7BFC /* LeftDrawer */,
+				B35A1C901CBF413C000A7BFC /* More */,
+				B35A1C961CBF413C000A7BFC /* tableViewCells */,
+				B35A1C9D1CBF413C000A7BFC /* uiview */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -309,10 +621,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B35A1C7A1CBF40C2000A7BFC /* HospitalMapKitViewController.xib in Resources */,
+				B35A1C6B1CBF40C2000A7BFC /* LeftDrawerRemindViewController.xib in Resources */,
+				B35A1C741CBF40C2000A7BFC /* DQShowFirstViewController.xib in Resources */,
+				B35A1C5E1CBF40C2000A7BFC /* AddCaseViewController.xib in Resources */,
+				B35A1CA51CBF413C000A7BFC /* AddRecordChoiceItem.xib in Resources */,
+				B35A1C6F1CBF40C2000A7BFC /* LeftDrawerViewController.xib in Resources */,
+				B35A1C7E1CBF40C2000A7BFC /* WeatherViewController.xib in Resources */,
+				B35A1CAB1CBF413C000A7BFC /* RemindTableViewCell.xib in Resources */,
+				B35A1CB21CBF413C000A7BFC /* DQMyCaseTableViewCell.xib in Resources */,
 				B32AE4BE1CBEA09A00E9ED91 /* Info.plist in Resources */,
 				B3955D051CBE94A400E6F9B1 /* Assets.xcassets in Resources */,
+				B35A1CAD1CBF413C000A7BFC /* CircumHospitalTableViewCell.xib in Resources */,
+				B35A1C621CBF40C2000A7BFC /* AddHWViewController.xib in Resources */,
+				B35A1C761CBF40C2000A7BFC /* RecordViewController.xib in Resources */,
+				B35A1C601CBF40C2000A7BFC /* AddFirstViewController.xib in Resources */,
+				B35A1CB01CBF413C000A7BFC /* DQFirstTableViewCell.xib in Resources */,
 				B3955D071CBE94A400E6F9B1 /* Main.storyboard in Resources */,
+				B35A1CA71CBF413C000A7BFC /* RecordCollectionViewCell.xib in Resources */,
+				B35A1C691CBF40C2000A7BFC /* BabyInfoViewController.xib in Resources */,
+				B35A1C661CBF40C2000A7BFC /* AddMultiRecordViewController.xib in Resources */,
+				B35A1C641CBF40C2000A7BFC /* AddImageRecordViewController.xib in Resources */,
 				B3955D061CBE94A400E6F9B1 /* LaunchScreen.storyboard in Resources */,
+				B35A1C781CBF40C2000A7BFC /* CircumHospitalViewController.xib in Resources */,
+				B35A1C7C1CBF40C2000A7BFC /* MoreViewController.xib in Resources */,
+				B35A1C6D1CBF40C2000A7BFC /* LeftDrawerSetViewController.xib in Resources */,
+				B35A1C721CBF40C2000A7BFC /* DQShowFirstImageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,19 +709,49 @@
 				B3955D0A1CBE94A400E6F9B1 /* ViewController.m in Sources */,
 				B3955D311CBE95D000E6F9B1 /* HealthModel.m in Sources */,
 				B3955D301CBE95D000E6F9B1 /* FirstModel.m in Sources */,
+				B35A1C681CBF40C2000A7BFC /* BabyInfoViewController.m in Sources */,
+				B35A1CB51CBF413C000A7BFC /* SquareRadioButton.m in Sources */,
+				B35A1C5D1CBF40C2000A7BFC /* AddCaseViewController.m in Sources */,
+				B35A1CA41CBF413C000A7BFC /* AddRecordChoiceItem.m in Sources */,
+				B35A1CA91CBF413C000A7BFC /* AddBabyView.m in Sources */,
+				B35A1C651CBF40C2000A7BFC /* AddMultiRecordViewController.m in Sources */,
+				B35A1C731CBF40C2000A7BFC /* DQShowFirstViewController.m in Sources */,
 				B3955D321CBE95D000E6F9B1 /* MyCaseModel.m in Sources */,
+				B35A1C7B1CBF40C2000A7BFC /* MoreViewController.m in Sources */,
+				B35A1CB11CBF413C000A7BFC /* DQMyCaseTableViewCell.m in Sources */,
+				B35A1CAF1CBF413C000A7BFC /* DQFirstTableViewCell.m in Sources */,
 				B3955D371CBE95D000E6F9B1 /* FirstDao.m in Sources */,
+				B35A1C611CBF40C2000A7BFC /* AddHWViewController.m in Sources */,
+				B35A1C751CBF40C2000A7BFC /* RecordViewController.m in Sources */,
 				B3955D341CBE95D000E6F9B1 /* HospitalModel.m in Sources */,
+				B35A1C701CBF40C2000A7BFC /* MainViewController.m in Sources */,
+				B35A1C6A1CBF40C2000A7BFC /* LeftDrawerRemindViewController.m in Sources */,
 				B3955D381CBE95D000E6F9B1 /* FMDBHelper.m in Sources */,
+				B35A1C6E1CBF40C2000A7BFC /* LeftDrawerViewController.m in Sources */,
 				B3955D391CBE95D000E6F9B1 /* HealthDao.m in Sources */,
 				B3955D3B1CBE95D000E6F9B1 /* RecordDao.m in Sources */,
 				B3955D361CBE95D000E6F9B1 /* BabyDao.m in Sources */,
 				B3955D351CBE95D000E6F9B1 /* MyAnnotation.m in Sources */,
+				B35A1C6C1CBF40C2000A7BFC /* LeftDrawerSetViewController.m in Sources */,
+				B35A1CAE1CBF413C000A7BFC /* WeatherView.m in Sources */,
+				B35A1C7D1CBF40C2000A7BFC /* WeatherViewController.m in Sources */,
+				B35A1CB41CBF413C000A7BFC /* MultiSelectButton.m in Sources */,
+				B35A1CAA1CBF413C000A7BFC /* RemindTableViewCell.m in Sources */,
+				B35A1CA81CBF413C000A7BFC /* AddBabyBaseView.m in Sources */,
+				B35A1CB31CBF413C000A7BFC /* DQHWView.m in Sources */,
+				B35A1C791CBF40C2000A7BFC /* HospitalMapKitViewController.m in Sources */,
+				B35A1C711CBF40C2000A7BFC /* DQShowFirstImageViewController.m in Sources */,
 				B3955D3A1CBE95D000E6F9B1 /* MyCaseDao.m in Sources */,
 				B3955D3C1CBE95D000E6F9B1 /* RemindModel.m in Sources */,
+				B35A1CAC1CBF413C000A7BFC /* CircumHospitalTableViewCell.m in Sources */,
+				B35A1C5F1CBF40C2000A7BFC /* AddFirstViewController.m in Sources */,
 				B3955D2F1CBE95D000E6F9B1 /* BabyModel.m in Sources */,
 				B3955D091CBE94A400E6F9B1 /* main.m in Sources */,
+				B35A1C631CBF40C2000A7BFC /* AddImageRecordViewController.m in Sources */,
+				B35A1C671CBF40C2000A7BFC /* BaseNavigationController.m in Sources */,
 				B3955D041CBE94A400E6F9B1 /* AppDelegate.m in Sources */,
+				B35A1CA61CBF413C000A7BFC /* RecordCollectionViewCell.m in Sources */,
+				B35A1C771CBF40C2000A7BFC /* CircumHospitalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

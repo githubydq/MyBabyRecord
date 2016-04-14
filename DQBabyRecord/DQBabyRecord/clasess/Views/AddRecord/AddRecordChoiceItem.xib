@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddRecordChoiceItem">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YIA-ac-TEb">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="YIA-ac-TEb" secondAttribute="height" multiplier="400:323" id="4Is-uH-THE"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="4Is-uH-THE"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="4Is-uH-THE"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4H-Sd-BXz">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5h-A1-5mP">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" red="1" green="1" blue="0.46397860740000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="13" y="26" width="379" height="289"/>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="YIA-ac-TEb" secondAttribute="trailing" id="CbC-kz-dXj"/>
+                <constraint firstItem="p4H-Sd-BXz" firstAttribute="top" secondItem="YIA-ac-TEb" secondAttribute="bottom" id="Xcx-zA-i0W"/>
+                <constraint firstItem="YIA-ac-TEb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="amz-bu-SHm"/>
+                <constraint firstAttribute="trailing" secondItem="p4H-Sd-BXz" secondAttribute="trailing" id="bf2-bU-PNy"/>
+                <constraint firstAttribute="bottom" secondItem="p4H-Sd-BXz" secondAttribute="bottom" id="bug-vv-Mca"/>
+                <constraint firstItem="p4H-Sd-BXz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eJg-fn-saY"/>
+                <constraint firstItem="YIA-ac-TEb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ov1-KZ-VCz"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="YIA-ac-TEb"/>
+                    <exclude reference="p4H-Sd-BXz"/>
+                    <exclude reference="R5h-A1-5mP"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="Xcx-zA-i0W"/>
+                    <exclude reference="bf2-bU-PNy"/>
+                    <exclude reference="bug-vv-Mca"/>
+                    <exclude reference="eJg-fn-saY"/>
+                    <exclude reference="CbC-kz-dXj"/>
+                    <exclude reference="amz-bu-SHm"/>
+                    <exclude reference="ov1-KZ-VCz"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="YIA-ac-TEb"/>
+                    <include reference="p4H-Sd-BXz"/>
+                    <include reference="R5h-A1-5mP"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="Xcx-zA-i0W"/>
+                    <include reference="bf2-bU-PNy"/>
+                    <include reference="bug-vv-Mca"/>
+                    <include reference="eJg-fn-saY"/>
+                    <include reference="CbC-kz-dXj"/>
+                    <include reference="amz-bu-SHm"/>
+                    <include reference="ov1-KZ-VCz"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="itemImage" destination="YIA-ac-TEb" id="Mee-LH-gBU"/>
+                <outlet property="itemLabel" destination="p4H-Sd-BXz" id="dhs-um-2l1"/>
+            </connections>
+            <point key="canvasLocation" x="276" y="192"/>
+        </view>
+    </objects>
+</document>

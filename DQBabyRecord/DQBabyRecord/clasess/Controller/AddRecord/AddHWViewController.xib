@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddHWViewController">
+            <connections>
+                <outlet property="height" destination="gCT-JJ-cc3" id="pml-m7-XW9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weight" destination="ySa-Pv-ZP2" id="gdA-rp-P4k"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="身高：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3j-eQ-zWc">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="MPq-Co-qIe"/>
+                        <constraint firstAttribute="height" constant="28" id="VlB-wH-Jpl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="MPq-Co-qIe"/>
+                            <exclude reference="VlB-wH-Jpl"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="MPq-Co-qIe"/>
+                            <include reference="VlB-wH-Jpl"/>
+                        </mask>
+                    </variation>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入身高cm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCT-JJ-cc3">
+                    <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="151" id="Fou-Ak-yni"/>
+                        <constraint firstAttribute="height" constant="30" id="g7y-RE-PiE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Fou-Ak-yni"/>
+                            <exclude reference="g7y-RE-PiE"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="Fou-Ak-yni"/>
+                            <include reference="g7y-RE-PiE"/>
+                        </mask>
+                    </variation>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入体重kg" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ySa-Pv-ZP2">
+                    <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="体重：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiF-7J-lW3">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="MiF-7J-lW3" firstAttribute="height" secondItem="H3j-eQ-zWc" secondAttribute="height" id="M1x-gb-Bhn"/>
+                <constraint firstItem="H3j-eQ-zWc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="36" id="Mb2-UW-RCJ">
+                    <variation key="widthClass=compact" constant="74"/>
+                </constraint>
+                <constraint firstItem="ySa-Pv-ZP2" firstAttribute="height" secondItem="gCT-JJ-cc3" secondAttribute="height" id="NgJ-5r-DT7"/>
+                <constraint firstItem="MiF-7J-lW3" firstAttribute="top" secondItem="H3j-eQ-zWc" secondAttribute="bottom" constant="20" id="V1o-MA-1DV"/>
+                <constraint firstItem="ySa-Pv-ZP2" firstAttribute="width" secondItem="gCT-JJ-cc3" secondAttribute="width" id="lib-RS-4p3"/>
+                <constraint firstItem="ySa-Pv-ZP2" firstAttribute="centerY" secondItem="MiF-7J-lW3" secondAttribute="centerY" id="pgO-Ag-JRe"/>
+                <constraint firstItem="gCT-JJ-cc3" firstAttribute="leading" secondItem="H3j-eQ-zWc" secondAttribute="trailing" id="pj7-WM-R1T"/>
+                <constraint firstItem="H3j-eQ-zWc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="ssa-Lr-yOX"/>
+                <constraint firstItem="gCT-JJ-cc3" firstAttribute="centerY" secondItem="H3j-eQ-zWc" secondAttribute="centerY" id="wlf-kC-Wnu"/>
+                <constraint firstItem="ySa-Pv-ZP2" firstAttribute="leading" secondItem="MiF-7J-lW3" secondAttribute="trailing" id="wwX-Hm-ITI"/>
+                <constraint firstItem="MiF-7J-lW3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="x0A-sv-EG0"/>
+                <constraint firstItem="MiF-7J-lW3" firstAttribute="width" secondItem="H3j-eQ-zWc" secondAttribute="width" id="zep-fR-9ao"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="H3j-eQ-zWc"/>
+                    <exclude reference="gCT-JJ-cc3"/>
+                    <exclude reference="ySa-Pv-ZP2"/>
+                    <exclude reference="MiF-7J-lW3"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="Mb2-UW-RCJ"/>
+                    <exclude reference="ssa-Lr-yOX"/>
+                    <exclude reference="M1x-gb-Bhn"/>
+                    <exclude reference="V1o-MA-1DV"/>
+                    <exclude reference="x0A-sv-EG0"/>
+                    <exclude reference="zep-fR-9ao"/>
+                    <exclude reference="pj7-WM-R1T"/>
+                    <exclude reference="wlf-kC-Wnu"/>
+                    <exclude reference="NgJ-5r-DT7"/>
+                    <exclude reference="lib-RS-4p3"/>
+                    <exclude reference="pgO-Ag-JRe"/>
+                    <exclude reference="wwX-Hm-ITI"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="H3j-eQ-zWc"/>
+                    <include reference="gCT-JJ-cc3"/>
+                    <include reference="ySa-Pv-ZP2"/>
+                    <include reference="MiF-7J-lW3"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="Mb2-UW-RCJ"/>
+                    <include reference="ssa-Lr-yOX"/>
+                    <include reference="M1x-gb-Bhn"/>
+                    <include reference="V1o-MA-1DV"/>
+                    <include reference="x0A-sv-EG0"/>
+                    <include reference="zep-fR-9ao"/>
+                    <include reference="pj7-WM-R1T"/>
+                    <include reference="wlf-kC-Wnu"/>
+                    <include reference="NgJ-5r-DT7"/>
+                    <include reference="lib-RS-4p3"/>
+                    <include reference="pgO-Ag-JRe"/>
+                    <include reference="wwX-Hm-ITI"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="184" y="343"/>
+        </view>
+    </objects>
+</document>
