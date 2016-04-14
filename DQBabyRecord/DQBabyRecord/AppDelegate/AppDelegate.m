@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import <MMDrawerController.h>
+#import "LeftDrawerViewController.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,15 +20,13 @@
 #pragma mark -
 #pragma mark 创建抽屉库
 -(void)createDrawer{
-    UIViewController * center = [[UIViewController alloc] init];
-    center.view.backgroundColor = [UIColor redColor];
+    MainViewController * center = [[MainViewController alloc] init];
     
-    UIViewController * left = [[UIViewController alloc] init];
-    left.view.backgroundColor = [UIColor blueColor];
+    LeftDrawerViewController * left = [[LeftDrawerViewController alloc] init];
     
     MMDrawerController * drawer = [[MMDrawerController alloc] initWithCenterViewController:center leftDrawerViewController:left rightDrawerViewController:nil];
     drawer.maximumLeftDrawerWidth = SCREEN_WIDTH*5.0/7.0;
-    [drawer setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [drawer setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeBezelPanningCenterView];
     [drawer setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
     self.window.rootViewController = drawer;
 }

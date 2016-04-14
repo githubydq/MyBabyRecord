@@ -12,8 +12,33 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
+
+#import "Singleton.h"
+
+#import "ImageHelper.h"
+#import "TimeHelper.h"
+#import "BaseNavigationController.h"
+
+//宽高
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define FONT_SIZE @20
+
+/**当前宝贝*/
+#define NOW_BABY @"nowbaby"
+//当前城市
+#define NOW_LOCALITY @"locality"
+//当前区
+#define NOW_SUBLOCALITY @"subLocality"
+
+/**背景颜色*/
+#define BACK_COLOR [UIColor colorWithRed:224.0/255.0 green:224.0/255.0 blue:224.0/255.0 alpha:1.0]
+
+/**图片地址*/
+#define IMG_PATH [NSString stringWithFormat:@"%@/Documents/image",NSHomeDirectory()]
+
+//api——key
+#define API_KEY @"132b6202fbd7c38c1d0978d5c3766d3f"
 
 
 #endif /* PrefixHeader_pch */
