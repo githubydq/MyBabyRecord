@@ -18,6 +18,7 @@
 #import "ImageHelper.h"
 #import "TimeHelper.h"
 #import "BaseNavigationController.h"
+#import "NSString+DQStringWidth.h"
 
 //宽高
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width

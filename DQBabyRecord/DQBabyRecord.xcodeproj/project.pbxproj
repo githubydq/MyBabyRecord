@@ -76,6 +76,15 @@
 		B35A1CEA1CBF41D5000A7BFC /* UMSShareListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1CDA1CBF41D5000A7BFC /* UMSShareListController.xib */; };
 		B35A1CEB1CBF41D5000A7BFC /* UMSocialSDKResourcesNew.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B35A1CDB1CBF41D5000A7BFC /* UMSocialSDKResourcesNew.bundle */; };
 		B35A1CEE1CBF4248000A7BFC /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1CED1CBF4248000A7BFC /* Singleton.m */; };
+		B35A1CF21CBF4E00000A7BFC /* DQFirstCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1CF01CBF4E00000A7BFC /* DQFirstCollectionViewCell.m */; };
+		B35A1CF31CBF4E00000A7BFC /* DQFirstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1CF11CBF4E00000A7BFC /* DQFirstCollectionViewCell.xib */; };
+		B35A1CF61CBF57B6000A7BFC /* NSString+DQStringWidth.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1CF51CBF57B6000A7BFC /* NSString+DQStringWidth.m */; };
+		B35A1D031CBFD60B000A7BFC /* DQMyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1D021CBFD60B000A7BFC /* DQMyFlowLayout.m */; };
+		B35A1D071CBFDF2A000A7BFC /* DQHWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1D051CBFDF2A000A7BFC /* DQHWCollectionViewCell.m */; };
+		B35A1D081CBFDF2A000A7BFC /* DQHWCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1D061CBFDF2A000A7BFC /* DQHWCollectionViewCell.xib */; };
+		B35A1D0B1CBFE5F2000A7BFC /* DQMyCaseFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1D0A1CBFE5F2000A7BFC /* DQMyCaseFlowLayout.m */; };
+		B35A1D0F1CBFE6F0000A7BFC /* DQCaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1D0D1CBFE6F0000A7BFC /* DQCaseCollectionViewCell.m */; };
+		B35A1D101CBFE6F0000A7BFC /* DQCaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1D0E1CBFE6F0000A7BFC /* DQCaseCollectionViewCell.xib */; };
 		B3955D041CBE94A400E6F9B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3955CFA1CBE94A400E6F9B1 /* AppDelegate.m */; };
 		B3955D051CBE94A400E6F9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3955CFB1CBE94A400E6F9B1 /* Assets.xcassets */; };
 		B3955D061CBE94A400E6F9B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3955CFC1CBE94A400E6F9B1 /* LaunchScreen.storyboard */; };
@@ -215,6 +224,21 @@
 		B35A1CDC1CBF41D5000A7BFC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/UMSocialLocalizable.strings"; sourceTree = "<group>"; };
 		B35A1CEC1CBF4248000A7BFC /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		B35A1CED1CBF4248000A7BFC /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
+		B35A1CEF1CBF4E00000A7BFC /* DQFirstCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQFirstCollectionViewCell.h; sourceTree = "<group>"; };
+		B35A1CF01CBF4E00000A7BFC /* DQFirstCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQFirstCollectionViewCell.m; sourceTree = "<group>"; };
+		B35A1CF11CBF4E00000A7BFC /* DQFirstCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQFirstCollectionViewCell.xib; sourceTree = "<group>"; };
+		B35A1CF41CBF57B6000A7BFC /* NSString+DQStringWidth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DQStringWidth.h"; sourceTree = "<group>"; };
+		B35A1CF51CBF57B6000A7BFC /* NSString+DQStringWidth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DQStringWidth.m"; sourceTree = "<group>"; };
+		B35A1D011CBFD60B000A7BFC /* DQMyFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQMyFlowLayout.h; sourceTree = "<group>"; };
+		B35A1D021CBFD60B000A7BFC /* DQMyFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQMyFlowLayout.m; sourceTree = "<group>"; };
+		B35A1D041CBFDF2A000A7BFC /* DQHWCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQHWCollectionViewCell.h; sourceTree = "<group>"; };
+		B35A1D051CBFDF2A000A7BFC /* DQHWCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQHWCollectionViewCell.m; sourceTree = "<group>"; };
+		B35A1D061CBFDF2A000A7BFC /* DQHWCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQHWCollectionViewCell.xib; sourceTree = "<group>"; };
+		B35A1D091CBFE5F2000A7BFC /* DQMyCaseFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQMyCaseFlowLayout.h; sourceTree = "<group>"; };
+		B35A1D0A1CBFE5F2000A7BFC /* DQMyCaseFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQMyCaseFlowLayout.m; sourceTree = "<group>"; };
+		B35A1D0C1CBFE6F0000A7BFC /* DQCaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQCaseCollectionViewCell.h; sourceTree = "<group>"; };
+		B35A1D0D1CBFE6F0000A7BFC /* DQCaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQCaseCollectionViewCell.m; sourceTree = "<group>"; };
+		B35A1D0E1CBFE6F0000A7BFC /* DQCaseCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQCaseCollectionViewCell.xib; sourceTree = "<group>"; };
 		B3955CDE1CBE918F00E6F9B1 /* DQBabyRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DQBabyRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3955CF91CBE94A400E6F9B1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3955CFA1CBE94A400E6F9B1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -341,15 +365,15 @@
 		B35A1C461CBF40C2000A7BFC /* LifeRecord */ = {
 			isa = PBXGroup;
 			children = (
+				B35A1C4D1CBF40C2000A7BFC /* RecordViewController.h */,
+				B35A1C4E1CBF40C2000A7BFC /* RecordViewController.m */,
+				B35A1C4F1CBF40C2000A7BFC /* RecordViewController.xib */,
 				B35A1C471CBF40C2000A7BFC /* DQShowFirstImageViewController.h */,
 				B35A1C481CBF40C2000A7BFC /* DQShowFirstImageViewController.m */,
 				B35A1C491CBF40C2000A7BFC /* DQShowFirstImageViewController.xib */,
 				B35A1C4A1CBF40C2000A7BFC /* DQShowFirstViewController.h */,
 				B35A1C4B1CBF40C2000A7BFC /* DQShowFirstViewController.m */,
 				B35A1C4C1CBF40C2000A7BFC /* DQShowFirstViewController.xib */,
-				B35A1C4D1CBF40C2000A7BFC /* RecordViewController.h */,
-				B35A1C4E1CBF40C2000A7BFC /* RecordViewController.m */,
-				B35A1C4F1CBF40C2000A7BFC /* RecordViewController.xib */,
 			);
 			path = LifeRecord;
 			sourceTree = "<group>";
@@ -389,6 +413,15 @@
 				B35A1C841CBF413C000A7BFC /* RecordCollectionViewCell.h */,
 				B35A1C851CBF413C000A7BFC /* RecordCollectionViewCell.m */,
 				B35A1C861CBF413C000A7BFC /* RecordCollectionViewCell.xib */,
+				B35A1CEF1CBF4E00000A7BFC /* DQFirstCollectionViewCell.h */,
+				B35A1CF01CBF4E00000A7BFC /* DQFirstCollectionViewCell.m */,
+				B35A1CF11CBF4E00000A7BFC /* DQFirstCollectionViewCell.xib */,
+				B35A1D041CBFDF2A000A7BFC /* DQHWCollectionViewCell.h */,
+				B35A1D051CBFDF2A000A7BFC /* DQHWCollectionViewCell.m */,
+				B35A1D061CBFDF2A000A7BFC /* DQHWCollectionViewCell.xib */,
+				B35A1D0C1CBFE6F0000A7BFC /* DQCaseCollectionViewCell.h */,
+				B35A1D0D1CBFE6F0000A7BFC /* DQCaseCollectionViewCell.m */,
+				B35A1D0E1CBFE6F0000A7BFC /* DQCaseCollectionViewCell.xib */,
 			);
 			path = collectionViewCells;
 			sourceTree = "<group>";
@@ -466,6 +499,8 @@
 		B35A1CB71CBF41D5000A7BFC /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				B35A1CF41CBF57B6000A7BFC /* NSString+DQStringWidth.h */,
+				B35A1CF51CBF57B6000A7BFC /* NSString+DQStringWidth.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -486,6 +521,10 @@
 			children = (
 				B35A1CBF1CBF41D5000A7BFC /* WaterflowLayout.h */,
 				B35A1CC01CBF41D5000A7BFC /* WaterflowLayout.m */,
+				B35A1D011CBFD60B000A7BFC /* DQMyFlowLayout.h */,
+				B35A1D021CBFD60B000A7BFC /* DQMyFlowLayout.m */,
+				B35A1D091CBFE5F2000A7BFC /* DQMyCaseFlowLayout.h */,
+				B35A1D0A1CBFE5F2000A7BFC /* DQMyCaseFlowLayout.m */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -730,6 +769,7 @@
 		B3955CD61CBE918F00E6F9B1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DQ;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = youdingquan;
 				TargetAttributes = {
@@ -781,9 +821,12 @@
 				B35A1CAD1CBF413C000A7BFC /* CircumHospitalTableViewCell.xib in Resources */,
 				B35A1C621CBF40C2000A7BFC /* AddHWViewController.xib in Resources */,
 				B35A1C761CBF40C2000A7BFC /* RecordViewController.xib in Resources */,
+				B35A1CF31CBF4E00000A7BFC /* DQFirstCollectionViewCell.xib in Resources */,
 				B35A1CE91CBF41D5000A7BFC /* UMSnsAccountViewController.xib in Resources */,
 				B35A1C601CBF40C2000A7BFC /* AddFirstViewController.xib in Resources */,
 				B35A1CB01CBF413C000A7BFC /* DQFirstTableViewCell.xib in Resources */,
+				B35A1D081CBFDF2A000A7BFC /* DQHWCollectionViewCell.xib in Resources */,
+				B35A1D101CBFE6F0000A7BFC /* DQCaseCollectionViewCell.xib in Resources */,
 				B35A1CE51CBF41D5000A7BFC /* UMSCommentInputControlleriPad.xib in Resources */,
 				B3955D071CBE94A400E6F9B1 /* Main.storyboard in Resources */,
 				B35A1CA71CBF413C000A7BFC /* RecordCollectionViewCell.xib in Resources */,
@@ -859,7 +902,9 @@
 			files = (
 				B3955D331CBE95D000E6F9B1 /* RecordModel.m in Sources */,
 				B3955D0A1CBE94A400E6F9B1 /* ViewController.m in Sources */,
+				B35A1D071CBFDF2A000A7BFC /* DQHWCollectionViewCell.m in Sources */,
 				B3955D311CBE95D000E6F9B1 /* HealthModel.m in Sources */,
+				B35A1D0F1CBFE6F0000A7BFC /* DQCaseCollectionViewCell.m in Sources */,
 				B3955D301CBE95D000E6F9B1 /* FirstModel.m in Sources */,
 				B35A1C681CBF40C2000A7BFC /* BabyInfoViewController.m in Sources */,
 				B35A1CB51CBF413C000A7BFC /* SquareRadioButton.m in Sources */,
@@ -868,6 +913,7 @@
 				B35A1CA41CBF413C000A7BFC /* AddRecordChoiceItem.m in Sources */,
 				B35A1CA91CBF413C000A7BFC /* AddBabyView.m in Sources */,
 				B35A1C651CBF40C2000A7BFC /* AddMultiRecordViewController.m in Sources */,
+				B35A1D0B1CBFE5F2000A7BFC /* DQMyCaseFlowLayout.m in Sources */,
 				B35A1C731CBF40C2000A7BFC /* DQShowFirstViewController.m in Sources */,
 				B3955D321CBE95D000E6F9B1 /* MyCaseModel.m in Sources */,
 				B35A1CEE1CBF4248000A7BFC /* Singleton.m in Sources */,
@@ -879,6 +925,7 @@
 				B35A1C751CBF40C2000A7BFC /* RecordViewController.m in Sources */,
 				B3955D341CBE95D000E6F9B1 /* HospitalModel.m in Sources */,
 				B35A1C701CBF40C2000A7BFC /* MainViewController.m in Sources */,
+				B35A1CF21CBF4E00000A7BFC /* DQFirstCollectionViewCell.m in Sources */,
 				B35A1CE01CBF41D5000A7BFC /* WaterflowLayout.m in Sources */,
 				B35A1C6A1CBF40C2000A7BFC /* LeftDrawerRemindViewController.m in Sources */,
 				B3955D381CBE95D000E6F9B1 /* FMDBHelper.m in Sources */,
@@ -906,6 +953,8 @@
 				B35A1C631CBF40C2000A7BFC /* AddImageRecordViewController.m in Sources */,
 				B35A1C671CBF40C2000A7BFC /* BaseNavigationController.m in Sources */,
 				B3955D041CBE94A400E6F9B1 /* AppDelegate.m in Sources */,
+				B35A1D031CBFD60B000A7BFC /* DQMyFlowLayout.m in Sources */,
+				B35A1CF61CBF57B6000A7BFC /* NSString+DQStringWidth.m in Sources */,
 				B35A1CA61CBF413C000A7BFC /* RecordCollectionViewCell.m in Sources */,
 				B35A1C771CBF40C2000A7BFC /* CircumHospitalViewController.m in Sources */,
 			);

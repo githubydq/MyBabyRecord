@@ -41,21 +41,21 @@ static const int JPDefaultColumsCount = 2;
 
 #pragma mark - 实现内部的方法
 
-- (CGSize)collectionViewContentSize
-{
-    // 找出最长那一列的最大Y值
-    CGFloat destMaxY = [self.columnMaxYs[0] doubleValue];
-    for (NSUInteger i = 1; i < self.columnMaxYs.count; i++) {
-        // 取出第i列的最大Y值
-        CGFloat columnMaxY = [self.columnMaxYs[i] doubleValue];
-        
-        // 找出数组中的最大值
-        if (destMaxY < columnMaxY) {
-            destMaxY = columnMaxY;
-        }
-    }
-    return CGSizeMake(0, destMaxY + JPDefaultInsets.bottom);
-}
+//- (CGSize)collectionViewContentSize
+//{
+//    // 找出最长那一列的最大Y值
+//    CGFloat destMaxY = [self.columnMaxYs[0] doubleValue];
+//    for (NSUInteger i = 1; i < self.columnMaxYs.count; i++) {
+//        // 取出第i列的最大Y值
+//        CGFloat columnMaxY = [self.columnMaxYs[i] doubleValue];
+//        
+//        // 找出数组中的最大值
+//        if (destMaxY < columnMaxY) {
+//            destMaxY = columnMaxY;
+//        }
+//    }
+//    return CGSizeMake(0, destMaxY + JPDefaultInsets.bottom);
+//}
 
 /**初始化*/
 - (void)prepareLayout
@@ -96,9 +96,9 @@ static const int JPDefaultColumsCount = 2;
     
 //--------------------------------
     // cell的高度
-//    RecordModel * model = [Singleton shareInstance].recordModelArray[indexPath.row];
-//    CGFloat h = w/[ImageHelper getScaleWithName:model.date];
-    CGFloat h = 50 + arc4random_uniform(150);
+    RecordModel * model = [Singleton shareInstance].recordModelArray[indexPath.row];
+    CGFloat h = w/[ImageHelper getScaleWithName:model.date];
+//    CGFloat h = 50 + arc4random_uniform(150);
     
     // 找出最短那一列的 列号 和 最大Y值
     CGFloat destMaxY = [self.columnMaxYs[0] doubleValue];

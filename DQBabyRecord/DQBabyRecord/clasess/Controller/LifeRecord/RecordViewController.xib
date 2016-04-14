@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecordViewController">
             <connections>
+                <outlet property="myColletion" destination="dQH-47-8NJ" id="yNT-Rl-0Ul"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,19 +15,49 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dQH-47-8NJ">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aDP-zw-Q5Q">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="43" y="317"/>
+            <constraints>
+                <constraint firstItem="dQH-47-8NJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1Ev-7u-rPN"/>
+                <constraint firstItem="dQH-47-8NJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="AYZ-Yw-1sy">
+                    <variation key="widthClass=compact" constant="64"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="dQH-47-8NJ" secondAttribute="trailing" id="Ine-nw-6Au"/>
+                <constraint firstAttribute="bottom" secondItem="dQH-47-8NJ" secondAttribute="bottom" id="spC-Yd-x6t"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="dQH-47-8NJ"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="1Ev-7u-rPN"/>
+                    <exclude reference="AYZ-Yw-1sy"/>
+                    <exclude reference="Ine-nw-6Au"/>
+                    <exclude reference="spC-Yd-x6t"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="dQH-47-8NJ"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="1Ev-7u-rPN"/>
+                    <include reference="AYZ-Yw-1sy"/>
+                    <include reference="Ine-nw-6Au"/>
+                    <include reference="spC-Yd-x6t"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="368" y="307"/>
         </view>
-        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" id="V4G-B1-sqb">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9gw-sr-9Tw">
-                <size key="itemSize" width="50" height="50"/>
-                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-            </collectionViewFlowLayout>
-            <point key="canvasLocation" x="497" y="317"/>
-        </collectionView>
     </objects>
 </document>
