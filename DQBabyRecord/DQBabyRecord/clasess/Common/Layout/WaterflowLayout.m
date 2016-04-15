@@ -8,19 +8,30 @@
 
 #import "WaterflowLayout.h"
 #import "RecordModel.h"
+#import "MyCaseModel.h"
 
 #define JPCollectionW self.collectionView.frame.size.width
 static const CGFloat JPDefaultRowMargin = 10;
 static const CGFloat JPDefaultColumnMargin = 10;
-static const UIEdgeInsets JPDefaultInsets = {10, 10, 10, 10};
-static const int JPDefaultColumsCount = 2;
+static const UIEdgeInsets JPDefaultInsets = {0, 10, 60, 10};
+//static const int JPDefaultColumsCount = 2;
 
 @interface WaterflowLayout()
 @property (nonatomic, strong) NSMutableArray *columnMaxYs;/**<每列最大y值*/
 @property (nonatomic, strong) NSMutableArray *attrsArray/**<cell的属性*/;
+@property(nonatomic,assign)NSInteger JPDefaultColumsCount;
 @end
 
 @implementation WaterflowLayout
+
+-(void)setIndex:(NSInteger)index{
+    _index = index;
+    if (_index == 0) {
+        self.JPDefaultColumsCount = 2;
+    }else{
+        self.JPDefaultColumsCount = 1;
+    }
+}
 
 #pragma mark - 懒加载
 - (NSMutableArray *)columnMaxYs
@@ -41,21 +52,21 @@ static const int JPDefaultColumsCount = 2;
 
 #pragma mark - 实现内部的方法
 
-//- (CGSize)collectionViewContentSize
-//{
-//    // 找出最长那一列的最大Y值
-//    CGFloat destMaxY = [self.columnMaxYs[0] doubleValue];
-//    for (NSUInteger i = 1; i < self.columnMaxYs.count; i++) {
-//        // 取出第i列的最大Y值
-//        CGFloat columnMaxY = [self.columnMaxYs[i] doubleValue];
-//        
-//        // 找出数组中的最大值
-//        if (destMaxY < columnMaxY) {
-//            destMaxY = columnMaxY;
-//        }
-//    }
-//    return CGSizeMake(0, destMaxY + JPDefaultInsets.bottom);
-//}
+- (CGSize)collectionViewContentSize
+{
+    // 找出最长那一列的最大Y值
+    CGFloat destMaxY = [self.columnMaxYs[0] doubleValue];
+    for (NSUInteger i = 1; i < self.columnMaxYs.count; i++) {
+        // 取出第i列的最大Y值
+        CGFloat columnMaxY = [self.columnMaxYs[i] doubleValue];
+        
+        // 找出数组中的最大值
+        if (destMaxY < columnMaxY) {
+            destMaxY = columnMaxY;
+        }
+    }
+    return CGSizeMake(0, destMaxY + JPDefaultInsets.bottom);
+}
 
 /**初始化*/
 - (void)prepareLayout
@@ -64,7 +75,7 @@ static const int JPDefaultColumsCount = 2;
     
     // 重置每一列的最大Y值
     [self.columnMaxYs removeAllObjects];
-    for (NSUInteger i = 0; i < JPDefaultColumsCount; i++){
+    for (NSUInteger i = 0; i < self.JPDefaultColumsCount; i++){
         [self.columnMaxYs addObject:@(JPDefaultInsets.top)];
     }
          
@@ -90,14 +101,25 @@ static const int JPDefaultColumsCount = 2;
     UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
 
     // 水平方向上的总间距
-    CGFloat xMargin = JPDefaultInsets.left + JPDefaultInsets.right + (JPDefaultColumsCount - 1) * JPDefaultColumnMargin;
+    CGFloat xMargin = JPDefaultInsets.left + JPDefaultInsets.right + (self.JPDefaultColumsCount - 1) * JPDefaultColumnMargin;
     // cell的宽度
-    CGFloat w = (JPCollectionW - xMargin) / JPDefaultColumsCount;
+    CGFloat w = (JPCollectionW - xMargin) / self.JPDefaultColumsCount;
     
 //--------------------------------
     // cell的高度
-    RecordModel * model = [Singleton shareInstance].recordModelArray[indexPath.row];
-    CGFloat h = w/[ImageHelper getScaleWithName:model.date];
+    CGFloat h = 0;
+    if (self.index == 0) {
+        RecordModel * model = [Singleton shareInstance].recordModelArray[indexPath.row];
+        h = w/[ImageHelper getScaleWithName:model.date];
+    }else if(self.index == 1){
+        h = 100;
+    }else if (self.index == 2){
+        h = 70;
+    }else{
+        MyCaseModel * model = [Singleton shareInstance].caseModelArray[indexPath.row];
+        NSString * str = model.detail;
+        h = [str getStringHeightWithFont:14 Width:(w-20)]+40;
+    }
 //    CGFloat h = 50 + arc4random_uniform(150);
     
     // 找出最短那一列的 列号 和 最大Y值

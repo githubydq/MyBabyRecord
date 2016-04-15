@@ -13,8 +13,8 @@
     return [self boundingRectWithSize:CGSizeMake(MAXFLOAT, 34) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize],NSForegroundColorAttributeName:[UIColor blackColor]} context:nil].size.width ;
 }
 
--(CGFloat)getNavTitleHeight:(NSInteger)fontSize{
-    return [self boundingRectWithSize:CGSizeMake(SCREEN_WIDTH-20-20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize],NSForegroundColorAttributeName:[UIColor blackColor]} context:nil].size.height ;
+-(CGFloat)getStringHeightWithFont:(NSInteger)fontSize Width:(CGFloat)width{
+    return [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize],NSForegroundColorAttributeName:[UIColor blackColor]} context:nil].size.height ;
 }
 
 @end

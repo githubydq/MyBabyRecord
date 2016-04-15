@@ -8,8 +8,6 @@
 
 #import "RecordViewController.h"
 #import "WaterflowLayout.h"
-#import "DQMyFlowLayout.h"
-#import "DQMyCaseFlowLayout.h"
 
 #import "RecordCollectionViewCell.h"
 #import "DQFirstCollectionViewCell.h"
@@ -39,7 +37,8 @@
 @property(nonatomic,strong)UIImageView * headImage;/**<头image*/
 
 @property (weak, nonatomic) IBOutlet UICollectionView *myColletion;
-@property(nonatomic,assign,readonly)NSInteger selectedIndex;
+@property(nonatomic,strong)WaterflowLayout * water;
+@property(nonatomic,assign)NSInteger selectedIndex;
 @end
 
 
@@ -70,7 +69,10 @@ static NSString * const identify4 = @"recordview4cell";
 #pragma mark -
 #pragma mark 懒加载
 -(NSInteger)selectedIndex{
-    return [self.topListArray indexOfObject:self.headLabel.text];
+    if (!_selectedIndex) {
+        _selectedIndex =0;
+    }
+    return _selectedIndex;
 }
 
 #pragma mark -
@@ -88,6 +90,9 @@ static NSString * const identify4 = @"recordview4cell";
 #pragma mark 初始化UI
 -(void)configUI{
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.water = [[WaterflowLayout alloc] init];
+    self.water.index = self.selectedIndex;
+    [self.myColletion setCollectionViewLayout:self.water animated:NO];
     self.myColletion.backgroundColor = BACK_COLOR;
     self.myColletion.delegate = self;
     self.myColletion.dataSource = self;
@@ -96,36 +101,14 @@ static NSString * const identify4 = @"recordview4cell";
     [self.myColletion registerNib:[UINib nibWithNibName:@"DQHWCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:identify3];
     [self.myColletion registerNib:[UINib nibWithNibName:@"DQCaseCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:identify4];
     
-    [self addHeadView:self.topListArray[3]];
+    [self addHeadView:self.topListArray[0]];
     [self setColletionView];
 }
 
 /**设置colletionView*/
 -(void)setColletionView{
-    //刷新放在layout设置代码的后面，会崩
+    self.water.index = self.selectedIndex;
     [self.myColletion reloadData];
-    if (self.selectedIndex == 0) {
-//        if (![NSStringFromClass(self.myColletion.collectionViewLayout.class) isEqualToString:@"WaterflowLayout"]) {
-            NSLog(@"%s",__FUNCTION__);
-            [self.myColletion setCollectionViewLayout:[[WaterflowLayout alloc] init] animated:NO completion:^(BOOL finished) {
-//                [self.myColletion reloadData];
-            }];
-//        }
-    }else if (self.selectedIndex == 3){
-//        if (![NSStringFromClass(self.myColletion.collectionViewLayout.class) isEqualToString:@"DQMyCaseFlowLayout"]) {
-            NSLog(@"%s",__FUNCTION__);
-            [self.myColletion setCollectionViewLayout:[[DQMyCaseFlowLayout alloc] init] animated:NO completion:^(BOOL finished) {
-//                [self.myColletion reloadData];
-            }];
-//        }
-    }else{
-//        if (![NSStringFromClass(self.myColletion.collectionViewLayout.class) isEqualToString:@"DQMyFlowLayout"]) {
-            NSLog(@"%s",__FUNCTION__);
-            [self.myColletion setCollectionViewLayout:[[DQMyFlowLayout alloc] init] animated:NO completion:^(BOOL finished) {
-//                [self.myColletion reloadData];
-            }];
-//        }
-    }
 }
 
 /**添加头视图*/
@@ -184,10 +167,12 @@ static NSString * const identify4 = @"recordview4cell";
 }
 /**选项点击*/
 -(void)recordItemClick:(UIButton*)btn{
-    [self addHeadView:btn.titleLabel.text];
+    self.selectedIndex = [self.topListArray indexOfObject:btn.titleLabel.text];
     
     UIView * v = [UIApplication sharedApplication].keyWindow.subviews.lastObject;
     [v removeFromSuperview];
+    
+    [self addHeadView:btn.titleLabel.text];
     
     [self setColletionView];
 }
@@ -212,6 +197,8 @@ static NSString * const identify4 = @"recordview4cell";
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     if (self.selectedIndex == 0) {
         RecordCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:identify1 forIndexPath:indexPath];
+        cell.layer.cornerRadius = 5;
+        cell.layer.masksToBounds = YES;
         [cell setData:[Singleton shareInstance].recordModelArray[indexPath.row]];
         return cell;
     }else if(self.selectedIndex == 1){
@@ -222,10 +209,14 @@ static NSString * const identify4 = @"recordview4cell";
         return cell;
     }else if (self.selectedIndex == 2){
         DQHWCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:identify3 forIndexPath:indexPath];
+        cell.layer.cornerRadius = 5;
+        cell.layer.masksToBounds = YES;
         cell.model = [Singleton shareInstance].healthModelArray[indexPath.row];
         return cell;
     }else if (self.selectedIndex == 3){
         DQCaseCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:identify4 forIndexPath:indexPath];
+        cell.layer.cornerRadius = 5;
+        cell.layer.masksToBounds = YES;
         cell.model = [Singleton shareInstance].caseModelArray[indexPath.row];
         return cell;
     }

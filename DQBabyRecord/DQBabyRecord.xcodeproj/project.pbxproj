@@ -79,10 +79,8 @@
 		B35A1CF21CBF4E00000A7BFC /* DQFirstCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1CF01CBF4E00000A7BFC /* DQFirstCollectionViewCell.m */; };
 		B35A1CF31CBF4E00000A7BFC /* DQFirstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1CF11CBF4E00000A7BFC /* DQFirstCollectionViewCell.xib */; };
 		B35A1CF61CBF57B6000A7BFC /* NSString+DQStringWidth.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1CF51CBF57B6000A7BFC /* NSString+DQStringWidth.m */; };
-		B35A1D031CBFD60B000A7BFC /* DQMyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1D021CBFD60B000A7BFC /* DQMyFlowLayout.m */; };
 		B35A1D071CBFDF2A000A7BFC /* DQHWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1D051CBFDF2A000A7BFC /* DQHWCollectionViewCell.m */; };
 		B35A1D081CBFDF2A000A7BFC /* DQHWCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1D061CBFDF2A000A7BFC /* DQHWCollectionViewCell.xib */; };
-		B35A1D0B1CBFE5F2000A7BFC /* DQMyCaseFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1D0A1CBFE5F2000A7BFC /* DQMyCaseFlowLayout.m */; };
 		B35A1D0F1CBFE6F0000A7BFC /* DQCaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1D0D1CBFE6F0000A7BFC /* DQCaseCollectionViewCell.m */; };
 		B35A1D101CBFE6F0000A7BFC /* DQCaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1D0E1CBFE6F0000A7BFC /* DQCaseCollectionViewCell.xib */; };
 		B3955D041CBE94A400E6F9B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3955CFA1CBE94A400E6F9B1 /* AppDelegate.m */; };
@@ -229,13 +227,9 @@
 		B35A1CF11CBF4E00000A7BFC /* DQFirstCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQFirstCollectionViewCell.xib; sourceTree = "<group>"; };
 		B35A1CF41CBF57B6000A7BFC /* NSString+DQStringWidth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DQStringWidth.h"; sourceTree = "<group>"; };
 		B35A1CF51CBF57B6000A7BFC /* NSString+DQStringWidth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DQStringWidth.m"; sourceTree = "<group>"; };
-		B35A1D011CBFD60B000A7BFC /* DQMyFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQMyFlowLayout.h; sourceTree = "<group>"; };
-		B35A1D021CBFD60B000A7BFC /* DQMyFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQMyFlowLayout.m; sourceTree = "<group>"; };
 		B35A1D041CBFDF2A000A7BFC /* DQHWCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQHWCollectionViewCell.h; sourceTree = "<group>"; };
 		B35A1D051CBFDF2A000A7BFC /* DQHWCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQHWCollectionViewCell.m; sourceTree = "<group>"; };
 		B35A1D061CBFDF2A000A7BFC /* DQHWCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQHWCollectionViewCell.xib; sourceTree = "<group>"; };
-		B35A1D091CBFE5F2000A7BFC /* DQMyCaseFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQMyCaseFlowLayout.h; sourceTree = "<group>"; };
-		B35A1D0A1CBFE5F2000A7BFC /* DQMyCaseFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQMyCaseFlowLayout.m; sourceTree = "<group>"; };
 		B35A1D0C1CBFE6F0000A7BFC /* DQCaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQCaseCollectionViewCell.h; sourceTree = "<group>"; };
 		B35A1D0D1CBFE6F0000A7BFC /* DQCaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQCaseCollectionViewCell.m; sourceTree = "<group>"; };
 		B35A1D0E1CBFE6F0000A7BFC /* DQCaseCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQCaseCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -521,10 +515,6 @@
 			children = (
 				B35A1CBF1CBF41D5000A7BFC /* WaterflowLayout.h */,
 				B35A1CC01CBF41D5000A7BFC /* WaterflowLayout.m */,
-				B35A1D011CBFD60B000A7BFC /* DQMyFlowLayout.h */,
-				B35A1D021CBFD60B000A7BFC /* DQMyFlowLayout.m */,
-				B35A1D091CBFE5F2000A7BFC /* DQMyCaseFlowLayout.h */,
-				B35A1D0A1CBFE5F2000A7BFC /* DQMyCaseFlowLayout.m */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -913,7 +903,6 @@
 				B35A1CA41CBF413C000A7BFC /* AddRecordChoiceItem.m in Sources */,
 				B35A1CA91CBF413C000A7BFC /* AddBabyView.m in Sources */,
 				B35A1C651CBF40C2000A7BFC /* AddMultiRecordViewController.m in Sources */,
-				B35A1D0B1CBFE5F2000A7BFC /* DQMyCaseFlowLayout.m in Sources */,
 				B35A1C731CBF40C2000A7BFC /* DQShowFirstViewController.m in Sources */,
 				B3955D321CBE95D000E6F9B1 /* MyCaseModel.m in Sources */,
 				B35A1CEE1CBF4248000A7BFC /* Singleton.m in Sources */,
@@ -953,7 +942,6 @@
 				B35A1C631CBF40C2000A7BFC /* AddImageRecordViewController.m in Sources */,
 				B35A1C671CBF40C2000A7BFC /* BaseNavigationController.m in Sources */,
 				B3955D041CBE94A400E6F9B1 /* AppDelegate.m in Sources */,
-				B35A1D031CBFD60B000A7BFC /* DQMyFlowLayout.m in Sources */,
 				B35A1CF61CBF57B6000A7BFC /* NSString+DQStringWidth.m in Sources */,
 				B35A1CA61CBF413C000A7BFC /* RecordCollectionViewCell.m in Sources */,
 				B35A1C771CBF40C2000A7BFC /* CircumHospitalViewController.m in Sources */,

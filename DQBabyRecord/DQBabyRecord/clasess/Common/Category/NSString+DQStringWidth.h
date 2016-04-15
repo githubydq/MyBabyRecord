@@ -11,5 +11,5 @@
 @interface NSString (DQStringWidth)
 /**获取导航栏标题的宽度*/
 -(CGFloat)getNavTitleWidth:(NSInteger)fontSize;
--(CGFloat)getNavTitleHeight:(NSInteger)fontSize;
+-(CGFloat)getStringHeightWithFont:(NSInteger)fontSize Width:(CGFloat)width;
 @end

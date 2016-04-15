@@ -9,4 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface WaterflowLayout : UICollectionViewLayout
+@property(nonatomic,assign)NSInteger index;
 @end
