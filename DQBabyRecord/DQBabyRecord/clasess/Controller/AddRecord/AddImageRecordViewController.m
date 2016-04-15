@@ -69,6 +69,7 @@
     self.model.image = self.dateString;
     [RecordDao save:self.model];
     [ImageHelper saveImage:self.img withName:self.dateString];
+    [ImageHelper saveSmallImage:self.img withName:self.dateString];
     [[Singleton shareInstance].recordModelArray insertObject:self.model atIndex:0];
     [self addImageRecordLeftClick];
 }
@@ -136,8 +137,9 @@
     //判断资源类型
     if ([mediaType isEqualToString:@"public.image"]){
         //如果是图片
-        self.img = info[UIImagePickerControllerOriginalImage];
-        NSData * data = UIImageJPEGRepresentation(self.img, 0.1);
+        UIImage * image = info[UIImagePickerControllerOriginalImage];
+        NSData * data = UIImageJPEGRepresentation(image, 0.1);
+        self.img = [UIImage imageWithData:data];
         [self.image setImage:[UIImage imageWithData:data]];
         [self.delete setHidden:NO];
     }

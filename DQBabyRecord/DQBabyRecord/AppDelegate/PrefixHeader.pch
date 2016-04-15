@@ -37,6 +37,7 @@
 
 /**图片地址*/
 #define IMG_PATH [NSString stringWithFormat:@"%@/Documents/image",NSHomeDirectory()]
+#define SMALL_IMG_PATH [NSString stringWithFormat:@"%@/Documents/smallimage",NSHomeDirectory()]
 
 //api——key
 #define API_KEY @"132b6202fbd7c38c1d0978d5c3766d3f"

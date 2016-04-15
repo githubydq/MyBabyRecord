@@ -11,6 +11,7 @@
 @interface ImageHelper : NSObject
 /**保存图片*/
 +(void)saveImage:(UIImage*)image withName:(NSString *)date;
++(void)saveSmallImage:(UIImage*)image withName:(NSString *)date;
 /**读取图片，缩放*/
 +(UIImage *)getImageWithName:(NSString*)date;
 /**返回图片宽高比*/

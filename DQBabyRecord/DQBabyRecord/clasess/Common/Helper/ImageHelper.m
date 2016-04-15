@@ -14,8 +14,12 @@
 @implementation ImageHelper
 
 +(void)saveImage:(UIImage*)image withName:(NSString *)date{
-    NSData * data = UIImageJPEGRepresentation(image, 0.5);
+    NSData * data = UIImageJPEGRepresentation(image, 1);
     [data writeToFile:[NSString stringWithFormat:@"%@/%@",IMGPATH,date] atomically:YES];
+}
++(void)saveSmallImage:(UIImage*)image withName:(NSString *)date{
+    NSData * data = UIImageJPEGRepresentation(image, 0.1);
+    [data writeToFile:[NSString stringWithFormat:@"%@/%@",SMALL_IMG_PATH,date] atomically:YES];
 }
 
 +(UIImage *)getImageWithName:(NSString *)date{

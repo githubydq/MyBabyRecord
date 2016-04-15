@@ -27,7 +27,7 @@ static const UIEdgeInsets JPDefaultInsets = {0, 10, 60, 10};
 -(void)setIndex:(NSInteger)index{
     _index = index;
     if (_index == 0) {
-        self.JPDefaultColumsCount = 2;
+        self.JPDefaultColumsCount = 3;
     }else{
         self.JPDefaultColumsCount = 1;
     }

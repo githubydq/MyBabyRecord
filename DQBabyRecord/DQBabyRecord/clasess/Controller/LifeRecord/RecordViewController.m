@@ -223,9 +223,11 @@ static NSString * const identify4 = @"recordview4cell";
     return nil;
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    self.hidesBottomBarWhenPushed = YES;
     if (self.selectedIndex == 0) {
         DQShowImageViewController * showimage = [[DQShowImageViewController alloc] init];
         showimage.index = indexPath.row;
+        NSLog(@"------%ld",showimage.index);
         [self.navigationController pushViewController:showimage animated:NO];
     }else if(self.selectedIndex == 1){
         DQShowFirstViewController * showfirst = [[DQShowFirstViewController alloc] init];
@@ -236,5 +238,6 @@ static NSString * const identify4 = @"recordview4cell";
     }else if (self.selectedIndex == 3){
         
     }
+    self.hidesBottomBarWhenPushed = NO;
 }
 @end

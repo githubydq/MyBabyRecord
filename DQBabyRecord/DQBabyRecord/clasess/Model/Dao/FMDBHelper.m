@@ -36,7 +36,9 @@
         //创建图片文件夹
         NSError * error = nil;
         NSString * imgPath = [NSString stringWithFormat:@"%@/Documents/image",NSHomeDirectory()];
+        NSString * smallImgPath = [NSString stringWithFormat:@"%@/Documents/smallimage",NSHomeDirectory()];
         [file createDirectoryAtPath:imgPath withIntermediateDirectories:NO attributes:nil error:&error];
+        [file createDirectoryAtPath:smallImgPath withIntermediateDirectories:NO attributes:nil error:&error];
     }
     return db;
 }
