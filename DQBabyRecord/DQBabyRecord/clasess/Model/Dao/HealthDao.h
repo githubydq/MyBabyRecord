@@ -11,6 +11,7 @@
 @interface HealthDao : NSObject
 +(BOOL)save:(HealthModel *)health;
 +(BOOL)deleteAtDate:(NSString*)date;
++(BOOL)deleteAtName:(NSString*)name;
 +(BOOL)updateHealth:(HealthModel *)model;
 +(NSMutableArray *)findByName:(NSString *)name;
 @end

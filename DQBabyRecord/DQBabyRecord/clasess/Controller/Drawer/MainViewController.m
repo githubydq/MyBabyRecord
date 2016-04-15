@@ -51,6 +51,9 @@
     if (!baby) {
         NSLog(@"no baby");
         AddBabyView * v = [[AddBabyView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+        v.block = ^(){
+            
+        };
         v.backgroundColor = [UIColor blackColor];
         [[UIApplication sharedApplication].keyWindow addSubview:v];
     }
@@ -86,12 +89,12 @@
 }
 
 -(void)addRecordClick{
-//    AddRecordViewController * addRecord = [[AddRecordViewController alloc] init];
-//    BaseNavigationController * baseNav = [[BaseNavigationController alloc] initWithRootViewController:addRecord];
-//    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:baseNav animated:NO completion:nil];
-    AddMultiRecordViewController * addMultiRecord = [[AddMultiRecordViewController alloc] init];
-    BaseNavigationController * baseNav = [[BaseNavigationController alloc] initWithRootViewController:addMultiRecord];
-    [self presentViewController:baseNav animated:NO completion:nil];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:NOW_BABY]) {
+        AddMultiRecordViewController * addMultiRecord = [[AddMultiRecordViewController alloc] init];
+        BaseNavigationController * baseNav = [[BaseNavigationController alloc] initWithRootViewController:addMultiRecord];
+        [self presentViewController:baseNav animated:NO completion:nil];
+        
+    }
 }
 
 #pragma mark -

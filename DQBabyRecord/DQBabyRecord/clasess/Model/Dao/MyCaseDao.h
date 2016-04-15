@@ -13,6 +13,7 @@
 @interface MyCaseDao : NSObject
 +(BOOL)save:(MyCaseModel *)Case;
 +(BOOL)deleteAtDate:(NSString*)date;
++(BOOL)deleteAtName:(NSString*)name;
 +(BOOL)updateMyCase:(MyCaseModel *)model;
 +(NSMutableArray *)findByName:(NSString *)name;
 @end

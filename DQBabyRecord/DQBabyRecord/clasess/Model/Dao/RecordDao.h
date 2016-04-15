@@ -11,6 +11,7 @@
 @interface RecordDao : NSObject
 +(BOOL)save:(RecordModel *)baby;
 +(BOOL)deleteAtDate:(NSString*)date;
++(BOOL)deleteAtName:(NSString*)name;
 +(BOOL)updateRecord:(RecordModel *)model;
 +(NSMutableArray *)findByName:(NSString *)name;
 @end

@@ -38,6 +38,15 @@
     }else
         return NO;
 }
++(BOOL)deleteAtName:(NSString*)name{
+    FMDatabase * db = [FMDBHelper getCurrentFMDB];
+    if ([db open]) {
+        BOOL isSuccess = [db executeUpdate:@"delete from health where name = ?",name];
+        [db close];
+        return isSuccess;
+    }else
+        return NO;
+}
 
 //将int类型的转换成NSNumber类型的
 //改

@@ -50,9 +50,14 @@
 #pragma mark -
 #pragma mark 初始化数据
 -(void)loadData{
-    self.model = [BabyDao findByName:[[NSUserDefaults standardUserDefaults]objectForKey:NOW_BABY]];
-    self.name.text = self.model.name;
-    self.sex_age.text = [NSString stringWithFormat:@"%@  %@",self.model.sex,[TimeHelper getNowAge:self.model.birthday]];
+    if([[NSUserDefaults standardUserDefaults] objectForKey:NOW_BABY]){
+        self.model = [BabyDao findByName:[[NSUserDefaults standardUserDefaults]objectForKey:NOW_BABY]];
+        self.name.text = self.model.name;
+        self.sex_age.text = [NSString stringWithFormat:@"%@  %@",self.model.sex,[TimeHelper getNowAge:self.model.birthday]];
+    }else{
+        self.name.text = nil;
+        self.sex_age.text = nil;
+    }
     
     NSInteger imageNum = 0;
     for (FirstModel * model in [Singleton shareInstance].firstModelArray) {

@@ -63,6 +63,7 @@ static NSString * const identify4 = @"recordview4cell";
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self loadData];
     [self.myColletion reloadData];
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void (^babyBlock)();
 @interface AddBabyView : UIView
-
+@property(nonatomic,copy)babyBlock block;
 @end

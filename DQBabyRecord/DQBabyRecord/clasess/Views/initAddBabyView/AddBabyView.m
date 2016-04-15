@@ -80,6 +80,7 @@
                 [BabyDao save:self.model];
                 [[NSUserDefaults standardUserDefaults] setObject:self.model.name forKey:NOW_BABY];
                 self.model = nil;
+                blockSelf.block();
                 [UIView animateWithDuration:2 animations:^{
                     [blockSelf.scroll removeFromSuperview];
                     [blockSelf removeFromSuperview];

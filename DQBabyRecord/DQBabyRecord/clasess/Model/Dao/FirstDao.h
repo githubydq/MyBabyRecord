@@ -11,6 +11,7 @@
 @interface FirstDao : NSObject
 +(BOOL)save:(FirstModel *)first;
 +(BOOL)deleteAtDate:(NSString*)date;
++(BOOL)deleteAtName:(NSString*)name;
 +(BOOL)updateFirst:(FirstModel *)model;
 +(NSMutableArray *)findByName:(NSString *)name;
 @end
