@@ -12,9 +12,9 @@
 #import "MainViewController.h"
 #import "BabyModel.h"
 #import "BabyDao.h"
+#import "FirstModel.h"
 
 #import "LeftDrawerSetViewController.h"
-#import "LeftDrawerRemindViewController.h"
 #import "BabyInfoViewController.h"
 
 @interface LeftDrawerViewController ()<BabyInfoDelegate>
@@ -23,6 +23,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *sex_age;
 
 @property(nonatomic,strong)BabyModel * model;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *imageNum;
+@property (weak, nonatomic) IBOutlet UILabel *healthNum;
+@property (weak, nonatomic) IBOutlet UILabel *caseNum;
 
 @end
 
@@ -34,6 +39,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self loadData];
 }
 
@@ -47,6 +53,16 @@
     self.model = [BabyDao findByName:[[NSUserDefaults standardUserDefaults]objectForKey:NOW_BABY]];
     self.name.text = self.model.name;
     self.sex_age.text = [NSString stringWithFormat:@"%@  %@",self.model.sex,[TimeHelper getNowAge:self.model.birthday]];
+    
+    NSInteger imageNum = 0;
+    for (FirstModel * model in [Singleton shareInstance].firstModelArray) {
+        NSString * str = model.image;
+        imageNum += str.length/14;
+    }
+    imageNum += [Singleton shareInstance].recordModelArray.count;
+    self.imageNum.text = [NSString stringWithFormat:@"%ld张",imageNum];
+    self.healthNum.text = [NSString stringWithFormat:@"%ld条",[Singleton shareInstance].healthModelArray.count];
+    self.caseNum.text = [NSString stringWithFormat:@"%ld条",[Singleton shareInstance].caseModelArray.count];
 }
 
 #pragma mark 点击事件
@@ -84,9 +100,7 @@
     [self pushVC:vc animated:YES];
 }
 - (IBAction)remindClick:(id)sender {
-    LeftDrawerRemindViewController * vc = [[LeftDrawerRemindViewController alloc] init];
-    vc.view.backgroundColor = BACK_COLOR;
-    [self pushVC:vc animated:YES];
+  
 }
 
 

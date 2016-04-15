@@ -156,6 +156,7 @@ static NSString * const identify = @"hospitalcell";
     CLLocation * otherLocation = [[CLLocation alloc] initWithLatitude:model.y longitude:model.x];
     mapView.userLocaton = self.locationManager.location;
     mapView.otherLocation = otherLocation;
+    mapView.model = model;
     self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:mapView animated:NO];
 //    self.hidesBottomBarWhenPushed = NO;

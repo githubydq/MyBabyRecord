@@ -22,8 +22,6 @@
 		B35A1C671CBF40C2000A7BFC /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C361CBF40C2000A7BFC /* BaseNavigationController.m */; };
 		B35A1C681CBF40C2000A7BFC /* BabyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C391CBF40C2000A7BFC /* BabyInfoViewController.m */; };
 		B35A1C691CBF40C2000A7BFC /* BabyInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C3A1CBF40C2000A7BFC /* BabyInfoViewController.xib */; };
-		B35A1C6A1CBF40C2000A7BFC /* LeftDrawerRemindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C3C1CBF40C2000A7BFC /* LeftDrawerRemindViewController.m */; };
-		B35A1C6B1CBF40C2000A7BFC /* LeftDrawerRemindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C3D1CBF40C2000A7BFC /* LeftDrawerRemindViewController.xib */; };
 		B35A1C6C1CBF40C2000A7BFC /* LeftDrawerSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C3F1CBF40C2000A7BFC /* LeftDrawerSetViewController.m */; };
 		B35A1C6D1CBF40C2000A7BFC /* LeftDrawerSetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C401CBF40C2000A7BFC /* LeftDrawerSetViewController.xib */; };
 		B35A1C6E1CBF40C2000A7BFC /* LeftDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C421CBF40C2000A7BFC /* LeftDrawerViewController.m */; };
@@ -80,6 +78,8 @@
 		B35A1D101CBFE6F0000A7BFC /* DQCaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1D0E1CBFE6F0000A7BFC /* DQCaseCollectionViewCell.xib */; };
 		B35A1D141CC0A05F000A7BFC /* DQShowImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1D121CC0A05F000A7BFC /* DQShowImageViewController.m */; };
 		B35A1D151CC0A05F000A7BFC /* DQShowImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1D131CC0A05F000A7BFC /* DQShowImageViewController.xib */; };
+		B35A1D1E1CC11806000A7BFC /* DQManageBabyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1D1C1CC11806000A7BFC /* DQManageBabyViewController.m */; };
+		B35A1D1F1CC11806000A7BFC /* DQManageBabyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1D1D1CC11806000A7BFC /* DQManageBabyViewController.xib */; };
 		B3955D041CBE94A400E6F9B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3955CFA1CBE94A400E6F9B1 /* AppDelegate.m */; };
 		B3955D051CBE94A400E6F9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3955CFB1CBE94A400E6F9B1 /* Assets.xcassets */; };
 		B3955D061CBE94A400E6F9B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3955CFC1CBE94A400E6F9B1 /* LaunchScreen.storyboard */; };
@@ -126,9 +126,6 @@
 		B35A1C381CBF40C2000A7BFC /* BabyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyInfoViewController.h; sourceTree = "<group>"; };
 		B35A1C391CBF40C2000A7BFC /* BabyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyInfoViewController.m; sourceTree = "<group>"; };
 		B35A1C3A1CBF40C2000A7BFC /* BabyInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BabyInfoViewController.xib; sourceTree = "<group>"; };
-		B35A1C3B1CBF40C2000A7BFC /* LeftDrawerRemindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDrawerRemindViewController.h; sourceTree = "<group>"; };
-		B35A1C3C1CBF40C2000A7BFC /* LeftDrawerRemindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftDrawerRemindViewController.m; sourceTree = "<group>"; };
-		B35A1C3D1CBF40C2000A7BFC /* LeftDrawerRemindViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftDrawerRemindViewController.xib; sourceTree = "<group>"; };
 		B35A1C3E1CBF40C2000A7BFC /* LeftDrawerSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDrawerSetViewController.h; sourceTree = "<group>"; };
 		B35A1C3F1CBF40C2000A7BFC /* LeftDrawerSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftDrawerSetViewController.m; sourceTree = "<group>"; };
 		B35A1C401CBF40C2000A7BFC /* LeftDrawerSetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftDrawerSetViewController.xib; sourceTree = "<group>"; };
@@ -225,6 +222,9 @@
 		B35A1D111CC0A05F000A7BFC /* DQShowImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQShowImageViewController.h; sourceTree = "<group>"; };
 		B35A1D121CC0A05F000A7BFC /* DQShowImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQShowImageViewController.m; sourceTree = "<group>"; };
 		B35A1D131CC0A05F000A7BFC /* DQShowImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQShowImageViewController.xib; sourceTree = "<group>"; };
+		B35A1D1B1CC11806000A7BFC /* DQManageBabyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQManageBabyViewController.h; sourceTree = "<group>"; };
+		B35A1D1C1CC11806000A7BFC /* DQManageBabyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQManageBabyViewController.m; sourceTree = "<group>"; };
+		B35A1D1D1CC11806000A7BFC /* DQManageBabyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQManageBabyViewController.xib; sourceTree = "<group>"; };
 		B3955CDE1CBE918F00E6F9B1 /* DQBabyRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DQBabyRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3955CF91CBE94A400E6F9B1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3955CFA1CBE94A400E6F9B1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -330,20 +330,20 @@
 		B35A1C371CBF40C2000A7BFC /* Drawer */ = {
 			isa = PBXGroup;
 			children = (
+				B35A1C441CBF40C2000A7BFC /* MainViewController.h */,
+				B35A1C451CBF40C2000A7BFC /* MainViewController.m */,
 				B35A1C381CBF40C2000A7BFC /* BabyInfoViewController.h */,
 				B35A1C391CBF40C2000A7BFC /* BabyInfoViewController.m */,
 				B35A1C3A1CBF40C2000A7BFC /* BabyInfoViewController.xib */,
-				B35A1C3B1CBF40C2000A7BFC /* LeftDrawerRemindViewController.h */,
-				B35A1C3C1CBF40C2000A7BFC /* LeftDrawerRemindViewController.m */,
-				B35A1C3D1CBF40C2000A7BFC /* LeftDrawerRemindViewController.xib */,
-				B35A1C3E1CBF40C2000A7BFC /* LeftDrawerSetViewController.h */,
-				B35A1C3F1CBF40C2000A7BFC /* LeftDrawerSetViewController.m */,
-				B35A1C401CBF40C2000A7BFC /* LeftDrawerSetViewController.xib */,
 				B35A1C411CBF40C2000A7BFC /* LeftDrawerViewController.h */,
 				B35A1C421CBF40C2000A7BFC /* LeftDrawerViewController.m */,
 				B35A1C431CBF40C2000A7BFC /* LeftDrawerViewController.xib */,
-				B35A1C441CBF40C2000A7BFC /* MainViewController.h */,
-				B35A1C451CBF40C2000A7BFC /* MainViewController.m */,
+				B35A1C3E1CBF40C2000A7BFC /* LeftDrawerSetViewController.h */,
+				B35A1C3F1CBF40C2000A7BFC /* LeftDrawerSetViewController.m */,
+				B35A1C401CBF40C2000A7BFC /* LeftDrawerSetViewController.xib */,
+				B35A1D1B1CC11806000A7BFC /* DQManageBabyViewController.h */,
+				B35A1D1C1CC11806000A7BFC /* DQManageBabyViewController.m */,
+				B35A1D1D1CC11806000A7BFC /* DQManageBabyViewController.xib */,
 			);
 			path = Drawer;
 			sourceTree = "<group>";
@@ -781,7 +781,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B35A1C7A1CBF40C2000A7BFC /* HospitalMapKitViewController.xib in Resources */,
-				B35A1C6B1CBF40C2000A7BFC /* LeftDrawerRemindViewController.xib in Resources */,
 				B35A1CE31CBF41D5000A7BFC /* UMSCommentDetailController.xib in Resources */,
 				B35A1C741CBF40C2000A7BFC /* DQShowFirstViewController.xib in Resources */,
 				B35A1D151CC0A05F000A7BFC /* DQShowImageViewController.xib in Resources */,
@@ -813,6 +812,7 @@
 				B35A1C781CBF40C2000A7BFC /* CircumHospitalViewController.xib in Resources */,
 				B35A1CE11CBF41D5000A7BFC /* UMSocialLocalizable.strings in Resources */,
 				B35A1CEB1CBF41D5000A7BFC /* UMSocialSDKResourcesNew.bundle in Resources */,
+				B35A1D1F1CC11806000A7BFC /* DQManageBabyViewController.xib in Resources */,
 				B35A1C7C1CBF40C2000A7BFC /* MoreViewController.xib in Resources */,
 				B35A1C6D1CBF40C2000A7BFC /* LeftDrawerSetViewController.xib in Resources */,
 				B35A1CE71CBF41D5000A7BFC /* UMShareEditViewControlleriPad.xib in Resources */,
@@ -901,7 +901,6 @@
 				B35A1C701CBF40C2000A7BFC /* MainViewController.m in Sources */,
 				B35A1CF21CBF4E00000A7BFC /* DQFirstCollectionViewCell.m in Sources */,
 				B35A1CE01CBF41D5000A7BFC /* WaterflowLayout.m in Sources */,
-				B35A1C6A1CBF40C2000A7BFC /* LeftDrawerRemindViewController.m in Sources */,
 				B3955D381CBE95D000E6F9B1 /* FMDBHelper.m in Sources */,
 				B35A1C6E1CBF40C2000A7BFC /* LeftDrawerViewController.m in Sources */,
 				B3955D391CBE95D000E6F9B1 /* HealthDao.m in Sources */,
@@ -929,6 +928,7 @@
 				B35A1CF61CBF57B6000A7BFC /* NSString+DQStringWidth.m in Sources */,
 				B35A1CA61CBF413C000A7BFC /* RecordCollectionViewCell.m in Sources */,
 				B35A1C771CBF40C2000A7BFC /* CircumHospitalViewController.m in Sources */,
+				B35A1D1E1CC11806000A7BFC /* DQManageBabyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

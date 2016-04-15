@@ -50,7 +50,7 @@
 #pragma mark -
 #pragma mark 数据加载
 -(void)loadData{
-    self.listArray = @[@[@"宝贝商城"],@[@"周边医院"],@[@"天气"]];
+    self.listArray = @[@[@"周边医院"],@[@"天气"]];
 }
 
 
@@ -75,13 +75,11 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        
-    }else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
             CircumHospitalViewController * circum = [[CircumHospitalViewController alloc] init];
             [self pushVC:circum];
         }
-    }else if (indexPath.section == 2) {
+    }else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
             [self pushVC:[[WeatherViewController alloc] init]];
         }

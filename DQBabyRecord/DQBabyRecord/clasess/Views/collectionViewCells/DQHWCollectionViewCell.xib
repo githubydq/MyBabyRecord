@@ -81,6 +81,7 @@
             </constraints>
             <size key="customSize" width="290" height="69"/>
             <connections>
+                <outlet property="date" destination="fMn-fV-Soo" id="YZI-et-myX"/>
                 <outlet property="height" destination="K6E-AE-Ml6" id="gch-Nx-EIt"/>
                 <outlet property="weight" destination="hIy-rh-rEx" id="8Em-lI-BMd"/>
             </connections>
