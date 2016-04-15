@@ -16,6 +16,7 @@
 
 #import "RecordModel.h"
 #import "RecordDao.h"
+#import "DQShowImageViewController.h"
 
 #import "FirstModel.h"
 #import "FirstDao.h"
@@ -23,7 +24,6 @@
 
 #import "HealthModel.h"
 #import "HealthDao.h"
-#import "DQHWView.h"
 
 #import "MyCaseModel.h"
 #import "MyCaseDao.h"
@@ -223,6 +223,18 @@ static NSString * const identify4 = @"recordview4cell";
     return nil;
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
+    if (self.selectedIndex == 0) {
+        DQShowImageViewController * showimage = [[DQShowImageViewController alloc] init];
+        showimage.index = indexPath.row;
+        [self.navigationController pushViewController:showimage animated:NO];
+    }else if(self.selectedIndex == 1){
+        DQShowFirstViewController * showfirst = [[DQShowFirstViewController alloc] init];
+        showfirst.index = indexPath.row;
+        [self.navigationController pushViewController:showfirst animated:NO];
+    }else if (self.selectedIndex == 2){
+        
+    }else if (self.selectedIndex == 3){
+        
+    }
 }
 @end

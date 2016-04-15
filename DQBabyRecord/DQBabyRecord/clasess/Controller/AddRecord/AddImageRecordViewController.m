@@ -66,6 +66,7 @@
     self.model.name = [[NSUserDefaults standardUserDefaults] objectForKey:NOW_BABY];
     self.model.date = self.dateString;
     self.model.detail = self.textView.text;
+    self.model.image = self.dateString;
     [RecordDao save:self.model];
     [ImageHelper saveImage:self.img withName:self.dateString];
     [[Singleton shareInstance].recordModelArray insertObject:self.model atIndex:0];
