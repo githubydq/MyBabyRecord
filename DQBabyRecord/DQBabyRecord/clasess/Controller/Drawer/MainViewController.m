@@ -51,7 +51,7 @@
     if (!baby) {
         NSLog(@"no baby");
         AddBabyView * v = [[AddBabyView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-        v.block = ^(){
+        v.block = ^(NSString * name){
             
         };
         v.backgroundColor = [UIColor blackColor];

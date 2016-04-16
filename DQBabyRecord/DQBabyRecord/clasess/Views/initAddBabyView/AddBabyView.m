@@ -7,89 +7,71 @@
 //
 
 #import "AddBabyView.h"
-#import "AddBabyBaseView.h"
 #import "BabyModel.h"
 #import "BabyDao.h"
 
-@interface AddBabyView ()
-@property(nonatomic,strong)UIScrollView * scroll;/**< 滚动视图 */
-@property(nonatomic,assign)NSInteger viewNum;/**<视图个数*/
-@property(nonatomic,strong)BabyModel * model;/**<宝贝*/
+@interface AddBabyView ()<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *first;
+@property (weak, nonatomic) IBOutlet UIImageView *second;
+@property (weak, nonatomic) IBOutlet UIImageView *third;
+
 @end
 
 @implementation AddBabyView
 
--(instancetype)initWithFrame:(CGRect)frame{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self initData];
-        [self createScroll];
-        [self addBaseView];
+-(void)awakeFromNib{
+    NSLog(@"2123321");
+}
+
+- (IBAction)complete:(id)sender {
+    BabyModel * model = [[BabyModel alloc] init];
+    model.name = self.name.text;
+    model.sex = self.sex.text;
+    model.birthday = self.birthday.text;
+    [self.name resignFirstResponder];
+    [self.sex resignFirstResponder];
+    [self.birthday resignFirstResponder];
+    __block AddBabyView * blockSelf = self;
+    if ([self infoCorrect]) {
+        [BabyDao save:model];
+        blockSelf.block(model.name);
+        [blockSelf removeFromSuperview];
     }
-    return self;
 }
 
--(BabyModel *)model{
-    if (!_model) {
-        _model = [[BabyModel alloc] init];
+-(BOOL)infoCorrect{
+    BOOL isko = YES;
+    if (self.name.text.length <= 0) {
+        [self.first setHidden:NO];
+        isko = NO;
     }
-    return _model;
-}
-
-/** init data */
--(void)initData{
-//    self.viewNum = 3;
-}
-
-/** create scrollview */
--(void)createScroll{
-    self.scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    self.scroll.contentSize = CGSizeMake(SCREEN_WIDTH*self.viewNum, SCREEN_HEIGHT);
-    self.scroll.bounces = NO;
-    self.scroll.showsHorizontalScrollIndicator = NO;
-    self.scroll.showsVerticalScrollIndicator = NO;
-    self.scroll.scrollEnabled = NO;
-    self.scroll.backgroundColor = [UIColor grayColor];
-    [self addSubview:self.scroll];
-}
-
-/** 添加基本视图 */
--(void)addBaseView{
-    NSArray * array = @[@"姓名",@"性别",@"生日",];
-    self.viewNum = array.count;
-    for (int i = 0 ; i < self.viewNum ; i++) {
-        AddBabyBaseView * view = [[AddBabyBaseView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH*i, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-        view.isLastView = (i==self.viewNum-1) ? YES:NO;
-        view.title = array[i];
-        [view addInput:i];
-        
-        __block AddBabyView * blockSelf = self;
-        view.myBtnBlock = ^(CGPoint point,NSString * string){
-            NSInteger index = point.x/SCREEN_WIDTH;
-            if (index == 0) {
-                self.model.name = string;
-            }else if (index == 1){
-                self.model.sex = string;
-            }else if (index == 2){
-                self.model.birthday = string;
-            }
-            if (index < self.viewNum-1) {
-                [blockSelf.scroll setContentOffset:CGPointMake(point.x + SCREEN_WIDTH, point.y) animated:YES];
-            }else{
-//                NSLog(@"%@,%@,%@",self.model.name,self.model.sex,self.model.birthday);
-                [BabyDao save:self.model];
-                [[NSUserDefaults standardUserDefaults] setObject:self.model.name forKey:NOW_BABY];
-                self.model = nil;
-                blockSelf.block();
-                [UIView animateWithDuration:2 animations:^{
-                    [blockSelf.scroll removeFromSuperview];
-                    [blockSelf removeFromSuperview];
-                }completion:^(BOOL finished) {
-                }];
-            }
-        };
-        [self.scroll addSubview:view];
+    if (self.sex.text.length <= 0) {
+        [self.second setHidden:NO];
+        isko = NO;
     }
+    if (self.birthday.text.length <= 0) {
+        [self.third setHidden:NO];
+        isko = NO;
+    }
+    return isko;
+}
+
+- (IBAction)nameValueChange:(id)sender {
+    [self.first setHidden:YES];
+}
+
+- (IBAction)sexValueChange:(id)sender {
+    [self.second setHidden:YES];
+}
+
+- (IBAction)birthdayValueChange:(id)sender {
+    [self.third setHidden:YES];
+}
+
+- (IBAction)tapClick:(id)sender {
+    [self.name resignFirstResponder];
+    [self.sex resignFirstResponder];
+    [self.birthday resignFirstResponder];
 }
 
 @end

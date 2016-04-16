@@ -43,7 +43,7 @@
         UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(itemWidth*i+itemWidth/3.0, 0, itemWidth*2.0/3.0, height)];
         label.text = choiceItems[i];
         label.textAlignment = NSTextAlignmentCenter;
-        self.backgroundColor = [UIColor whiteColor];
+//        self.backgroundColor = [UIColor whiteColor];
         [self addSubview:label];
         
         [self.btnArray addObject:btn];

@@ -43,14 +43,16 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"添加宝贝" style:UIBarButtonItemStylePlain target:self action:@selector(manageBabyRightClick)];
 }
 -(void)manageBabyRightClick{
-    AddBabyView * v = [[AddBabyView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    __block DQManageBabyViewController * blockSelf =self;
-    v.block = ^(){
+    AddBabyView * v = [[[NSBundle mainBundle] loadNibNamed:@"addd" owner:self options:nil] lastObject];
+    v.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    
+    __block DQManageBabyViewController * blockSelf = self;
+    v.block = ^(NSString * name){
         NSLog(@"2342");
         [blockSelf loadData];
         [blockSelf.myTable reloadData];
     };
-    v.backgroundColor = [UIColor blackColor];
+//    v.backgroundColor = [UIColor blackColor];
     [[UIApplication sharedApplication].keyWindow addSubview:v];
 }
 
