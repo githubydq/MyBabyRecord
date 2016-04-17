@@ -28,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *imageNum;
 @property (weak, nonatomic) IBOutlet UILabel *healthNum;
 @property (weak, nonatomic) IBOutlet UILabel *caseNum;
+@property (weak, nonatomic) IBOutlet UILabel *firstNum;
 
 @end
 
@@ -54,20 +55,27 @@
         self.model = [BabyDao findByName:[[NSUserDefaults standardUserDefaults]objectForKey:NOW_BABY]];
         self.name.text = self.model.name;
         self.sex_age.text = [NSString stringWithFormat:@"%@  %@",self.model.sex,[TimeHelper getNowAge:self.model.birthday]];
+        
+        NSInteger imageNum = 0;
+        for (FirstModel * model in [Singleton shareInstance].firstModelArray) {
+            NSString * str = model.image;
+            imageNum += str.length/14;
+        }
+        imageNum += [Singleton shareInstance].recordModelArray.count;
+        self.imageNum.text = [NSString stringWithFormat:@"%ld张",imageNum];
+        self.healthNum.text = [NSString stringWithFormat:@"%ld条",[Singleton shareInstance].healthModelArray.count];
+        self.caseNum.text = [NSString stringWithFormat:@"%ld条",[Singleton shareInstance].caseModelArray.count];
+        self.firstNum.text = [NSString stringWithFormat:@"%ld条",[Singleton shareInstance].firstModelArray.count];
     }else{
         self.name.text = nil;
         self.sex_age.text = nil;
+        self.imageNum.text = @"0条";
+        self.healthNum.text = @"0条";
+        self.caseNum.text = @"0条";
+        self.firstNum.text = @"0条";
     }
     
-    NSInteger imageNum = 0;
-    for (FirstModel * model in [Singleton shareInstance].firstModelArray) {
-        NSString * str = model.image;
-        imageNum += str.length/14;
-    }
-    imageNum += [Singleton shareInstance].recordModelArray.count;
-    self.imageNum.text = [NSString stringWithFormat:@"%ld张",imageNum];
-    self.healthNum.text = [NSString stringWithFormat:@"%ld条",[Singleton shareInstance].healthModelArray.count];
-    self.caseNum.text = [NSString stringWithFormat:@"%ld条",[Singleton shareInstance].caseModelArray.count];
+    
 }
 
 #pragma mark 点击事件

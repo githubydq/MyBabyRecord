@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddHWViewController">
@@ -46,7 +46,7 @@
                         <constraint firstAttribute="height" constant="30" id="g7y-RE-PiE"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="Fou-Ak-yni"/>
@@ -63,7 +63,7 @@
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入体重kg" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ySa-Pv-ZP2">
                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="体重：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiF-7J-lW3">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -97,18 +97,18 @@
                     <exclude reference="MiF-7J-lW3"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="Mb2-UW-RCJ"/>
-                    <exclude reference="ssa-Lr-yOX"/>
-                    <exclude reference="M1x-gb-Bhn"/>
-                    <exclude reference="V1o-MA-1DV"/>
-                    <exclude reference="x0A-sv-EG0"/>
-                    <exclude reference="zep-fR-9ao"/>
                     <exclude reference="pj7-WM-R1T"/>
                     <exclude reference="wlf-kC-Wnu"/>
                     <exclude reference="NgJ-5r-DT7"/>
                     <exclude reference="lib-RS-4p3"/>
                     <exclude reference="pgO-Ag-JRe"/>
                     <exclude reference="wwX-Hm-ITI"/>
+                    <exclude reference="Mb2-UW-RCJ"/>
+                    <exclude reference="ssa-Lr-yOX"/>
+                    <exclude reference="M1x-gb-Bhn"/>
+                    <exclude reference="V1o-MA-1DV"/>
+                    <exclude reference="x0A-sv-EG0"/>
+                    <exclude reference="zep-fR-9ao"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -119,21 +119,21 @@
                     <include reference="MiF-7J-lW3"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="Mb2-UW-RCJ"/>
-                    <include reference="ssa-Lr-yOX"/>
-                    <include reference="M1x-gb-Bhn"/>
-                    <include reference="V1o-MA-1DV"/>
-                    <include reference="x0A-sv-EG0"/>
-                    <include reference="zep-fR-9ao"/>
                     <include reference="pj7-WM-R1T"/>
                     <include reference="wlf-kC-Wnu"/>
                     <include reference="NgJ-5r-DT7"/>
                     <include reference="lib-RS-4p3"/>
                     <include reference="pgO-Ag-JRe"/>
                     <include reference="wwX-Hm-ITI"/>
+                    <include reference="Mb2-UW-RCJ"/>
+                    <include reference="ssa-Lr-yOX"/>
+                    <include reference="M1x-gb-Bhn"/>
+                    <include reference="V1o-MA-1DV"/>
+                    <include reference="x0A-sv-EG0"/>
+                    <include reference="zep-fR-9ao"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="184" y="343"/>
+            <point key="canvasLocation" x="234" y="334"/>
         </view>
     </objects>
 </document>

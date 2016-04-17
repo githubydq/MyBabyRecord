@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-typedef void (^babyBlock)(NSString * name);
+@class AddBabyView;
+@protocol AddBabyViewDelegate <NSObject>
+
+@required
+-(void)addBabyView:(AddBabyView *)view CompleteAndName:(NSString*)name Sex:(NSString*)sex Birthday:(NSString*)birthday;
+
+@end
+
 @interface AddBabyView : UIView
-@property(nonatomic,copy)babyBlock block;
+@property(nonatomic,assign)id <AddBabyViewDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UITextField *name;
 @property (weak, nonatomic) IBOutlet UITextField *sex;

@@ -11,10 +11,12 @@
 #import "MoreViewController.h"
 
 #import "AddBabyView.h"
+#import "BabyDao.h"
+#import "BabyModel.h"
 
 #import "AddMultiRecordViewController.h"
 
-@interface MainViewController ()<UITabBarControllerDelegate>
+@interface MainViewController ()<UITabBarControllerDelegate,AddBabyViewDelegate>
 {
     NSArray * _VCNameArray;
     NSArray * _TabbarTitle;
@@ -36,9 +38,14 @@
     [super didReceiveMemoryWarning];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self configBaby];
+    
 }
 
 #pragma mark -
@@ -50,13 +57,22 @@
     NSString * baby = [user objectForKey:NOW_BABY];
     if (!baby) {
         NSLog(@"no baby");
-        AddBabyView * v = [[AddBabyView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-        v.block = ^(NSString * name){
-            
-        };
-        v.backgroundColor = [UIColor blackColor];
+        AddBabyView * v = [[[NSBundle mainBundle] loadNibNamed:@"addd" owner:self options:nil] lastObject];
+        v.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+        v.delegate = self;
         [[UIApplication sharedApplication].keyWindow addSubview:v];
     }
+}
+
+-(void)addBabyView:(AddBabyView *)view CompleteAndName:(NSString *)name Sex:(NSString *)sex Birthday:(NSString *)birthday{
+    
+    [view removeFromSuperview];
+    BabyModel * model = [[BabyModel alloc] init];
+    model.name = name;
+    model.sex = sex;
+    model.birthday = birthday;
+    [BabyDao save:model];
+    [[NSUserDefaults standardUserDefaults] setObject:name forKey:NOW_BABY];
 }
 
 #pragma mark -
@@ -113,11 +129,6 @@
     self.selectedIndex = 0;
 }
 
-
-
-#pragma mark -
-#pragma mark 数据请求
-
 #pragma mark -
 #pragma mark 代理
 
@@ -130,12 +141,5 @@
         return YES;
     }
 }
-
-#pragma mark -
-#pragma mark 业务逻辑
-
-#pragma mark -
-#pragma mark 通知注册和销毁
-
 
 @end

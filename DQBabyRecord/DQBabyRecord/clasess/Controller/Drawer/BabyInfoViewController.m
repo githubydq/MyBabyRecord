@@ -49,7 +49,6 @@
     //设置下拉刷新
     __block BabyInfoViewController * blockSelf = self;
     MJRefreshNormalHeader * header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        NSLog(@"打开了");
         [blockSelf choiceImage];
         [blockSelf.myTable.mj_header endRefreshing];
     }];
@@ -152,7 +151,7 @@
         UIImagePickerController * picker = [[UIImagePickerController alloc] init];
         picker.delegate = blockSelf;
         picker.sourceType = type;
-//        picker.allowsEditing = YES;
+        picker.allowsEditing = YES;
         dispatch_async(dispatch_get_main_queue(), ^{
             [blockSelf presentViewController:picker animated:YES completion:^{
             }];
@@ -167,7 +166,7 @@
     //判断资源类型
     if ([mediaType isEqualToString:@"public.image"]){
         //如果是图片
-        UIImage * image = info[UIImagePickerControllerOriginalImage];
+        UIImage * image = info[UIImagePickerControllerEditedImage];
         NSData * data = UIImageJPEGRepresentation(image, 0.2);
         self.imgView.image = [UIImage imageWithData:data];
         [self.myTable reloadData];

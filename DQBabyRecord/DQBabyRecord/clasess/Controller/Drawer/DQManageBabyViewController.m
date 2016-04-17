@@ -15,7 +15,7 @@
 #import "HealthDao.h"
 #import "MyCaseDao.h"
 
-@interface DQManageBabyViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface DQManageBabyViewController ()<UITableViewDataSource,UITableViewDelegate,AddBabyViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *myTable;
 
 @property(nonatomic,strong)NSMutableArray * modelArray;
@@ -45,13 +45,7 @@
 -(void)manageBabyRightClick{
     AddBabyView * v = [[[NSBundle mainBundle] loadNibNamed:@"addd" owner:self options:nil] lastObject];
     v.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-    
-    __block DQManageBabyViewController * blockSelf = self;
-    v.block = ^(NSString * name){
-        NSLog(@"2342");
-        [blockSelf loadData];
-        [blockSelf.myTable reloadData];
-    };
+    v.delegate = self;
 //    v.backgroundColor = [UIColor blackColor];
     [[UIApplication sharedApplication].keyWindow addSubview:v];
 }
@@ -116,6 +110,19 @@
     [[Singleton shareInstance].firstModelArray removeAllObjects];
     [[Singleton shareInstance].healthModelArray removeAllObjects];
     [[Singleton shareInstance].caseModelArray removeAllObjects];
+}
+
+#pragma mark -
+#pragma mark addbabyview delegate
+-(void)addBabyView:(AddBabyView *)view CompleteAndName:(NSString *)name Sex:(NSString *)sex Birthday:(NSString *)birthday{
+    [view removeFromSuperview];
+    BabyModel * model = [[BabyModel alloc] init];
+    model.name = name;
+    model.sex = sex;
+    model.birthday = birthday;
+    [BabyDao save:model];
+    [self.modelArray addObject:model];
+    [self.myTable reloadData];
 }
 
 @end
