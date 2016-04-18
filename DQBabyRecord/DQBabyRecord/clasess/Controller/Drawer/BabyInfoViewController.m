@@ -60,10 +60,9 @@
 }
 
 -(void)babyInfoRightClick{
-    BabyModel * model = [[BabyModel alloc] init];
-    model.image = [TimeHelper getNowTime];
-    [ImageHelper saveIconImag:self.imgView.image withName:model.image];
-    [self.delegate saveModel:model];
+    self.model.image = [TimeHelper getNowTime];
+    [ImageHelper saveIconImag:self.imgView.image withName:self.model.image];
+    [self.delegate saveModel:self.model];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

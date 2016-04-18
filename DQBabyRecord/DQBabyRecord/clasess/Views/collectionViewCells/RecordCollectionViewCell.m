@@ -23,7 +23,8 @@
     // Initialization code
 }
 
--(void)setData:(RecordModel *)model{
+-(void)setModel:(RecordModel *)model{
+    _model = model;
     NSString * year = [model.date substringWithRange:NSMakeRange(0, 4)];
     NSString * mouth = [model.date substringWithRange:NSMakeRange(4, 2)];
     NSString * day = [model.date substringWithRange:NSMakeRange(6, 2)];

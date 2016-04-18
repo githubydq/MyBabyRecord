@@ -27,6 +27,7 @@
 
 #import "MyCaseModel.h"
 #import "MyCaseDao.h"
+#import "AddCaseViewController.h"
 
 
 @interface RecordViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
@@ -39,6 +40,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *myColletion;
 @property(nonatomic,strong)WaterflowLayout * water;
 @property(nonatomic,assign)NSInteger selectedIndex;
+@property(nonatomic,assign)NSInteger deleteIndex;
 @end
 
 
@@ -200,25 +202,29 @@ static NSString * const identify4 = @"recordview4cell";
         RecordCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:identify1 forIndexPath:indexPath];
         cell.layer.cornerRadius = 5;
         cell.layer.masksToBounds = YES;
-        [cell setData:[Singleton shareInstance].recordModelArray[indexPath.row]];
+        cell.model = [Singleton shareInstance].recordModelArray[indexPath.row];
+        [self addLongPressAtCell:cell];
         return cell;
     }else if(self.selectedIndex == 1){
         DQFirstCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:identify2 forIndexPath:indexPath];
         cell.layer.cornerRadius = 5;
         cell.layer.masksToBounds = YES;
         cell.model = [Singleton shareInstance].firstModelArray[indexPath.row];
+        [self addLongPressAtCell:cell];
         return cell;
     }else if (self.selectedIndex == 2){
         DQHWCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:identify3 forIndexPath:indexPath];
         cell.layer.cornerRadius = 5;
         cell.layer.masksToBounds = YES;
         cell.model = [Singleton shareInstance].healthModelArray[indexPath.row];
+        [self addLongPressAtCell:cell];
         return cell;
     }else if (self.selectedIndex == 3){
         DQCaseCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:identify4 forIndexPath:indexPath];
         cell.layer.cornerRadius = 5;
         cell.layer.masksToBounds = YES;
         cell.model = [Singleton shareInstance].caseModelArray[indexPath.row];
+        [self addLongPressAtCell:cell];
         return cell;
     }
     return nil;
@@ -237,8 +243,70 @@ static NSString * const identify4 = @"recordview4cell";
     }else if (self.selectedIndex == 2){
         
     }else if (self.selectedIndex == 3){
-        
+        MyCaseModel * model = [Singleton shareInstance].caseModelArray[indexPath.row];
+        AddCaseViewController * addCase = [[AddCaseViewController alloc] init];
+        addCase.isEditing = YES;
+        [addCase setValue:model forKey:@"model"];
+        [self.navigationController pushViewController:addCase animated:NO];
     }
     self.hidesBottomBarWhenPushed = NO;
+    
+}
+
+#pragma mark -
+#pragma mark add UILongPressGestureRecognizer
+-(void)addLongPressAtCell:(UICollectionViewCell*)cell{
+    UILongPressGestureRecognizer * longpress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(recordLongPress:)];
+    longpress.minimumPressDuration = 1.0;
+    cell.userInteractionEnabled = YES;
+    [cell addGestureRecognizer:longpress];
+}
+
+-(void)recordLongPress:(UILongPressGestureRecognizer*)longpress{
+    if (longpress.state == UIGestureRecognizerStateBegan) {
+        if (self.selectedIndex == 0) {
+            RecordCollectionViewCell * cell = (RecordCollectionViewCell*)longpress.view;
+            self.deleteIndex = [self.myColletion indexPathForCell:cell].row;
+        }else if(self.selectedIndex == 1){
+            DQFirstCollectionViewCell * cell = (DQFirstCollectionViewCell*)longpress.view;
+            self.deleteIndex = [self.myColletion indexPathForCell:cell].row;
+        }else if (self.selectedIndex == 2){
+            DQHWCollectionViewCell * cell = (DQHWCollectionViewCell*)longpress.view;
+            self.deleteIndex = [self.myColletion indexPathForCell:cell].row;
+        }else if (self.selectedIndex == 3){
+            DQCaseCollectionViewCell * cell = (DQCaseCollectionViewCell*)longpress.view;
+            self.deleteIndex = [self.myColletion indexPathForCell:cell].row;
+        }
+        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"" message:@"是否删除该记录！！！" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }]];
+        [alert addAction:[UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self deleteRecord];
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+}
+
+-(void)deleteRecord{
+    if (self.selectedIndex == 0) {
+        RecordModel * model = [Singleton shareInstance].recordModelArray[self.deleteIndex];
+        [RecordDao deleteAtDate:model.date];
+        [[Singleton shareInstance].recordModelArray removeObjectAtIndex:self.deleteIndex];
+    }else if(self.selectedIndex == 1){
+        FirstModel * model = [Singleton shareInstance].firstModelArray[self.deleteIndex];
+        [FirstDao deleteAtDate:model.date];
+        [[Singleton shareInstance].firstModelArray removeObjectAtIndex:self.deleteIndex];
+    }else if (self.selectedIndex == 2){
+        HealthModel * model = [Singleton shareInstance].healthModelArray[self.deleteIndex];
+        [HealthDao deleteAtDate:model.date];
+        [[Singleton shareInstance].healthModelArray removeObjectAtIndex:self.deleteIndex];
+    }else if (self.selectedIndex == 3){
+        MyCaseModel * model = [Singleton shareInstance].caseModelArray[self.deleteIndex];
+        [MyCaseDao deleteAtDate:model.date];
+        [[Singleton shareInstance].caseModelArray removeObjectAtIndex:self.deleteIndex];
+    }
+    [self.myColletion deleteItemsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.deleteIndex inSection:0]]];
+    [self.myColletion reloadData];
 }
 @end

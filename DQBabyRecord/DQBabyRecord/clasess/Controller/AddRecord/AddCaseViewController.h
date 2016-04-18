@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AddCaseViewController : UIViewController
-
+@property(nonatomic,assign)BOOL isEditing;
 @end

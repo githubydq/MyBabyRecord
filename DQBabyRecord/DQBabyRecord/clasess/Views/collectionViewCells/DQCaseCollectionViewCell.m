@@ -21,6 +21,7 @@
 }
 
 -(void)setModel:(MyCaseModel *)model{
+    _model = model;
     self.detail.text = model.detail;
     self.date.text = [TimeHelper getNowTimeWithTime:model.date];
 }

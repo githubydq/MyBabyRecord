@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 @class RecordModel;
 @interface RecordCollectionViewCell : UICollectionViewCell
--(void)setData:(RecordModel*)model;
+@property(nonatomic,strong)RecordModel * model;
 @end

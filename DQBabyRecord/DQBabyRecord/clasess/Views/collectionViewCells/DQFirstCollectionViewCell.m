@@ -23,6 +23,7 @@
 }
 
 -(void)setModel:(FirstModel *)model{
+    _model = model;
     self.title.text = model.title;
     self.detail.text = model.detail;
     self.date.text = [TimeHelper getNowTimeWithTime:model.date];

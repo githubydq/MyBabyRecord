@@ -19,5 +19,5 @@
 
 @interface BabyInfoViewController : UIViewController
 @property(nonatomic,strong)BabyModel * model;
-@property(nonatomic,weak,nullable)id <BabyInfoDelegate> delegate;
+@property(nonatomic,weak)id <BabyInfoDelegate> delegate;
 @end

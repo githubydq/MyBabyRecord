@@ -47,7 +47,8 @@
     if (![db open]) {
         return NO;
     }else{
-        BOOL isSuccess = [db executeUpdate:@"update baby set name = ?, sex=?, birthday=?, image=? where id = ?", baby.name, baby.sex, baby.birthday, baby.image, @(baby.babyid)];
+        BOOL isSuccess = [db executeUpdate:@"update baby set name=?, sex=?, birthday=?, image=? where id = ?", baby.name, baby.sex, baby.birthday, baby.image, [NSString stringWithFormat:@"%ld",baby.babyid]];
+        NSLog(@"%ld",baby.babyid);
         [db close];
         return isSuccess;
     }

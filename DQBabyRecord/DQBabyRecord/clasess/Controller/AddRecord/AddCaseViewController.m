@@ -50,26 +50,41 @@
 #pragma mark 点击事件
 
 -(void)addCaseLeftClick{
-    UIViewController * vc = self.navigationController.viewControllers.firstObject;
-    [vc removeFromParentViewController];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if (!self.isEditing) {
+        UIViewController * vc = self.navigationController.viewControllers.firstObject;
+        [vc removeFromParentViewController];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }else{
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 -(void)addCaseRightClick{
-    self.model = [[MyCaseModel alloc] init];
-    self.model.name = [[NSUserDefaults standardUserDefaults] objectForKey:NOW_BABY];
-    self.model.date = [TimeHelper getNowTime];
-    self.model.detail = self.textView.text;
-    [MyCaseDao save:self.model];
-    [[Singleton shareInstance].caseModelArray insertObject:self.model atIndex:0];
+    if(!self.isEditing){
+        self.model = [[MyCaseModel alloc] init];
+        self.model.name = [[NSUserDefaults standardUserDefaults] objectForKey:NOW_BABY];
+        self.model.date = [TimeHelper getNowTime];
+        self.model.detail = self.textView.text;
+        [MyCaseDao save:self.model];
+        [[Singleton shareInstance].caseModelArray insertObject:self.model atIndex:0];
+    }else{
+        self.model.detail = self.textView.text;
+        [MyCaseDao updateMyCase:self.model];
+    }
     [self addCaseLeftClick];
 }
 
 #pragma mark 加载数据
 -(void)loadData{
-    self.textView.text = nil;
-    self.placeHold.text = @"宝宝生病了，赶紧记下来了";
-    self.dateString = [TimeHelper getNowTime];
-    self.date.text = [TimeHelper getNowTimeWithTime:self.dateString];
+    if (!self.isEditing) {
+        self.textView.text = nil;
+        self.placeHold.text = @"宝宝生病了，赶紧记下来了";
+        self.dateString = [TimeHelper getNowTime];
+        self.date.text = [TimeHelper getNowTimeWithTime:self.dateString];
+    }else{
+        self.placeHold.text = nil;
+        self.date.text = [TimeHelper getNowTimeWithTime:self.model.date];
+        self.textView.text = self.model.detail;
+    }
 }
 
 #pragma mark -

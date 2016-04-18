@@ -22,6 +22,7 @@
 }
 
 -(void)setModel:(HealthModel *)model{
+    _model = model;
     self.height.text = [NSString stringWithFormat:@"%@cm",model.height];
     self.weight.text = [NSString stringWithFormat:@"%@kg",model.weight];
     self.date.text = [TimeHelper getNowTimeWithTime:model.date];

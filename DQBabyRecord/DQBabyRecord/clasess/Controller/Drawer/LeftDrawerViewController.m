@@ -53,6 +53,9 @@
 -(void)loadData{
     if([[NSUserDefaults standardUserDefaults] objectForKey:NOW_BABY]){
         self.model = [BabyDao findByName:[[NSUserDefaults standardUserDefaults]objectForKey:NOW_BABY]];
+        if (self.model.image.length > 0) {
+            self.icon.image = [ImageHelper getImageWithName:self.model.image];
+        }
         self.name.text = self.model.name;
         self.sex_age.text = [NSString stringWithFormat:@"%@  %@",self.model.sex,[TimeHelper getNowAge:self.model.birthday]];
         
