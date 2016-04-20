@@ -102,6 +102,8 @@
 		B3955D3C1CBE95D000E6F9B1 /* RemindModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B3955D2D1CBE95D000E6F9B1 /* RemindModel.m */; };
 		B3FA78E61CC7AB88001C1372 /* DQRemindView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FA78E51CC7AB88001C1372 /* DQRemindView.m */; };
 		B3FA78E81CC7AB9F001C1372 /* DQRemindView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3FA78E71CC7AB9F001C1372 /* DQRemindView.xib */; };
+		B3FA78EC1CC7BC3A001C1372 /* DQAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FA78EA1CC7BC3A001C1372 /* DQAboutViewController.m */; };
+		B3FA78ED1CC7BC3A001C1372 /* DQAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3FA78EB1CC7BC3A001C1372 /* DQAboutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -266,6 +268,9 @@
 		B3FA78E41CC7AB88001C1372 /* DQRemindView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQRemindView.h; sourceTree = "<group>"; };
 		B3FA78E51CC7AB88001C1372 /* DQRemindView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQRemindView.m; sourceTree = "<group>"; };
 		B3FA78E71CC7AB9F001C1372 /* DQRemindView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQRemindView.xib; sourceTree = "<group>"; };
+		B3FA78E91CC7BC3A001C1372 /* DQAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQAboutViewController.h; sourceTree = "<group>"; };
+		B3FA78EA1CC7BC3A001C1372 /* DQAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQAboutViewController.m; sourceTree = "<group>"; };
+		B3FA78EB1CC7BC3A001C1372 /* DQAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQAboutViewController.xib; sourceTree = "<group>"; };
 		E05DED597496C5FA7D8C6E0E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EDFE7493C97BA473B399B799 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -336,18 +341,21 @@
 			children = (
 				B35A1C441CBF40C2000A7BFC /* MainViewController.h */,
 				B35A1C451CBF40C2000A7BFC /* MainViewController.m */,
-				B35A1C381CBF40C2000A7BFC /* BabyInfoViewController.h */,
-				B35A1C391CBF40C2000A7BFC /* BabyInfoViewController.m */,
-				B35A1C3A1CBF40C2000A7BFC /* BabyInfoViewController.xib */,
 				B35A1C411CBF40C2000A7BFC /* LeftDrawerViewController.h */,
 				B35A1C421CBF40C2000A7BFC /* LeftDrawerViewController.m */,
 				B35A1C431CBF40C2000A7BFC /* LeftDrawerViewController.xib */,
+				B35A1C381CBF40C2000A7BFC /* BabyInfoViewController.h */,
+				B35A1C391CBF40C2000A7BFC /* BabyInfoViewController.m */,
+				B35A1C3A1CBF40C2000A7BFC /* BabyInfoViewController.xib */,
 				B35A1C3E1CBF40C2000A7BFC /* LeftDrawerSetViewController.h */,
 				B35A1C3F1CBF40C2000A7BFC /* LeftDrawerSetViewController.m */,
 				B35A1C401CBF40C2000A7BFC /* LeftDrawerSetViewController.xib */,
 				B35A1D1B1CC11806000A7BFC /* DQManageBabyViewController.h */,
 				B35A1D1C1CC11806000A7BFC /* DQManageBabyViewController.m */,
 				B35A1D1D1CC11806000A7BFC /* DQManageBabyViewController.xib */,
+				B3FA78E91CC7BC3A001C1372 /* DQAboutViewController.h */,
+				B3FA78EA1CC7BC3A001C1372 /* DQAboutViewController.m */,
+				B3FA78EB1CC7BC3A001C1372 /* DQAboutViewController.xib */,
 			);
 			path = Drawer;
 			sourceTree = "<group>";
@@ -809,6 +817,7 @@
 				B35A1CE91CBF41D5000A7BFC /* UMSnsAccountViewController.xib in Resources */,
 				B35A1C601CBF40C2000A7BFC /* AddFirstViewController.xib in Resources */,
 				B35A1D081CBFDF2A000A7BFC /* DQHWCollectionViewCell.xib in Resources */,
+				B3FA78ED1CC7BC3A001C1372 /* DQAboutViewController.xib in Resources */,
 				B35A1D101CBFE6F0000A7BFC /* DQCaseCollectionViewCell.xib in Resources */,
 				B35A1CE51CBF41D5000A7BFC /* UMSCommentInputControlleriPad.xib in Resources */,
 				B3955D071CBE94A400E6F9B1 /* Main.storyboard in Resources */,
@@ -927,6 +936,7 @@
 				B3955D3A1CBE95D000E6F9B1 /* MyCaseDao.m in Sources */,
 				B3955D3C1CBE95D000E6F9B1 /* RemindModel.m in Sources */,
 				B35A1CAC1CBF413C000A7BFC /* CircumHospitalTableViewCell.m in Sources */,
+				B3FA78EC1CC7BC3A001C1372 /* DQAboutViewController.m in Sources */,
 				B35A1C5F1CBF40C2000A7BFC /* AddFirstViewController.m in Sources */,
 				B3955D2F1CBE95D000E6F9B1 /* BabyModel.m in Sources */,
 				B3955D091CBE94A400E6F9B1 /* main.m in Sources */,

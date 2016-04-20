@@ -8,6 +8,7 @@
 
 #import "LeftDrawerSetViewController.h"
 #import "DQManageBabyViewController.h"
+#import "DQAboutViewController.h"
 
 @interface LeftDrawerSetViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *myTable;
@@ -69,6 +70,12 @@
             DQManageBabyViewController * manage = [[DQManageBabyViewController alloc] init];
             self.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:manage animated:NO];
+        }
+    }else if (indexPath.section == 1){
+        if (indexPath.row == 0) {
+            DQAboutViewController * about = [[DQAboutViewController alloc] init];
+            self.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:about animated:NO];
         }
     }
 }
