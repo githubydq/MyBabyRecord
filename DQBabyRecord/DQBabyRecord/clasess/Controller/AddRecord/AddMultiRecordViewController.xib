@@ -140,7 +140,7 @@
             <point key="canvasLocation" x="-249" y="109"/>
         </view>
         <view contentMode="scaleToFill" id="vAT-EL-blf" userLabel="View1">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choice_image50x50" translatesAutoresizingMaskIntoConstraints="NO" id="Zlj-ca-MFt">
@@ -212,7 +212,7 @@
             <point key="canvasLocation" x="272" y="-142"/>
         </view>
         <view contentMode="scaleToFill" id="TgY-ke-KyQ" userLabel="View2">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choice_first50x50" translatesAutoresizingMaskIntoConstraints="NO" id="3xl-3k-feP">
@@ -284,7 +284,7 @@
             <point key="canvasLocation" x="546" y="-247"/>
         </view>
         <view contentMode="scaleToFill" id="YW2-j2-eLB" userLabel="View3">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choice_hw50x50" translatesAutoresizingMaskIntoConstraints="NO" id="inx-15-BgJ">
@@ -356,7 +356,7 @@
             <point key="canvasLocation" x="439" y="73"/>
         </view>
         <view contentMode="scaleToFill" id="DSb-eV-xPD" userLabel="View4">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choice_case50x50" translatesAutoresizingMaskIntoConstraints="NO" id="5XE-zY-Squ">

@@ -11,6 +11,8 @@
 #import "CircumHospitalTableViewCell.h"
 #import "HospitalMapKitViewController.h"
 
+#import "DQRemindView.h"
+
 #import "HospitalModel.h"
 
 #import <AFNetworking.h>
@@ -26,6 +28,8 @@
 @interface CircumHospitalViewController ()<UITableViewDataSource,UITableViewDelegate,CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *myTable;
 @property(nonatomic,strong)NSMutableArray * hospitalArray;/**<医院信息数组*/
+
+@property(nonatomic,strong)DQRemindView * remind;
 
 
 @property (strong,nonatomic)CLLocationManager *locationManager;
@@ -89,10 +93,11 @@ static NSString * const identify = @"hospitalcell";
             [model setValuesForKeysWithDictionary:dict];
             [BlockSelf.hospitalArray addObject:model];
         }
-//        NSLog(@"%@",BlockSelf.hospitalArray);
+        [self.remind removeFromSuperview];
+        self.remind = nil;
         [BlockSelf.myTable reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        [self weatherfailedLoad];
     }];
 }
 
@@ -100,6 +105,7 @@ static NSString * const identify = @"hospitalcell";
 #pragma mark 定位
 /** 定位当前城市 */
 -(void)positionCurrentCity{
+    [self weatherBeginLoad];
     //定位当前城市
     [UIApplication sharedApplication].idleTimerDisabled = TRUE;
     self.locationManager = [[CLLocationManager alloc] init];
@@ -164,6 +170,31 @@ static NSString * const identify = @"hospitalcell";
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;
+}
+
+#pragma mark -
+#pragma mark 加载信息
+-(void)weatherBeginLoad{
+    //提醒
+    if (!self.remind) {
+        self.remind = [[NSBundle mainBundle] loadNibNamed:@"DQRemindView" owner:nil options:nil].lastObject;
+        self.remind.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.3];
+        self.remind.title.text = @"信息加载中.....";
+        [[UIApplication sharedApplication].keyWindow addSubview:self.remind];
+        [self performSelector:@selector(weatherfailedLoad) withObject:nil afterDelay:10];
+    }
+}
+
+-(void)weatherfailedLoad{
+    if (self.remind) {
+        self.remind.title.text = @"加载失败";
+        [UIView animateWithDuration:1 animations:^{
+            self.remind.alpha = 0.1;
+        } completion:^(BOOL finished) {
+            [self.remind removeFromSuperview];
+            self.remind = nil;
+        }];
+    }
 }
 
 @end

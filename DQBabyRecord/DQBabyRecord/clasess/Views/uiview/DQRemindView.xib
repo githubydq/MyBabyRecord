@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DQRemindView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTY-sR-i53">
+                    <rect key="frame" x="113" y="284" width="150" height="100"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="XuS-ek-3IK">
+                            <rect key="frame" x="57" y="10" width="37" height="37"/>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信息加载中......" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqR-Fl-2et">
+                            <rect key="frame" x="10" y="47" width="130" height="53"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.42072971204188481" green="0.42072971204188481" blue="0.42072971204188481" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="8wm-oa-oEF"/>
+                        <constraint firstItem="fqR-Fl-2et" firstAttribute="top" secondItem="XuS-ek-3IK" secondAttribute="bottom" id="9PN-zI-YVl"/>
+                        <constraint firstItem="XuS-ek-3IK" firstAttribute="top" secondItem="LTY-sR-i53" secondAttribute="top" constant="10" id="B3I-I0-1gk"/>
+                        <constraint firstItem="XuS-ek-3IK" firstAttribute="centerX" secondItem="LTY-sR-i53" secondAttribute="centerX" id="W3G-gs-JS1"/>
+                        <constraint firstItem="fqR-Fl-2et" firstAttribute="leading" secondItem="LTY-sR-i53" secondAttribute="leading" constant="10" id="avi-qb-G8h"/>
+                        <constraint firstAttribute="bottom" secondItem="fqR-Fl-2et" secondAttribute="bottom" id="eem-vx-1Wh"/>
+                        <constraint firstAttribute="height" constant="100" id="sgQ-bI-815"/>
+                        <constraint firstAttribute="trailing" secondItem="fqR-Fl-2et" secondAttribute="trailing" constant="10" id="srd-DG-3cJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="LTY-sR-i53" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="sS9-PH-0Jp"/>
+                <constraint firstItem="LTY-sR-i53" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xI6-4T-WHJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="centerView" destination="LTY-sR-i53" id="84w-6D-ESv"/>
+                <outlet property="title" destination="fqR-Fl-2et" id="FTQ-Bv-nsU"/>
+            </connections>
+            <point key="canvasLocation" x="224.5" y="218.5"/>
+        </view>
+    </objects>
+</document>

@@ -14,6 +14,8 @@
 #import <AFNetworking.h>
 #import <MJRefresh.h>
 
+#import "DQRemindView.h"
+
 
 #define IS_IOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8)
 #define WEATHER_URL @"http://apis.baidu.com/heweather/weather/free"
@@ -26,6 +28,8 @@
 
 @property(nonatomic,strong)CLLocationManager * locationmanager;
 @property(nonatomic,copy)NSString * city;
+
+@property(nonatomic,strong)DQRemindView * remind;
 @end
 
 @implementation WeatherViewController
@@ -86,9 +90,10 @@
 }
 
 -(void)WeatherRightClick{
+    [self weatherBeginLoad];
     [self.HightArray removeAllObjects];
     [self.LowArray removeAllObjects];
-    if (self.city) {
+    if (self.city.length > 0) {
         [self loadData:self.city];
     }else{
         [self positionCurrentCity];
@@ -116,10 +121,14 @@
             NSLog(@"%@",dict[@"tmp"][@"max"]);
             [self.HightArray addObject:[NSNumber numberWithInteger:[dict[@"tmp"][@"max"] floatValue]]];
             [self.LowArray addObject:[NSNumber numberWithFloat:[dict[@"tmp"][@"min"] floatValue]]];
-            [_wv setNeedsDisplay];
+        }
+        [_wv setNeedsDisplay];
+        if (self.remind) {
+            [self.remind removeFromSuperview];
+            self.remind = nil;
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"22%@",error);
+        [self weatherfailedLoad];
     }];
     
 }
@@ -129,6 +138,7 @@
 #pragma mark 定位
 /** 定位当前城市 */
 -(void)positionCurrentCity{
+    [self weatherBeginLoad];
     //定位当前城市
     [UIApplication sharedApplication].idleTimerDisabled = TRUE;
     self.locationmanager = [[CLLocationManager alloc] init];
@@ -157,6 +167,32 @@
     }];
     //停止定位
     [self.locationmanager stopUpdatingLocation];
+}
+
+
+#pragma mark -
+#pragma mark 加载信息
+-(void)weatherBeginLoad{
+    //提醒
+    if (!self.remind) {
+        self.remind = [[NSBundle mainBundle] loadNibNamed:@"DQRemindView" owner:nil options:nil].lastObject;
+        self.remind.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.3];
+        self.remind.title.text = @"信息加载中.....";
+        [[UIApplication sharedApplication].keyWindow addSubview:self.remind];
+        [self performSelector:@selector(weatherfailedLoad) withObject:nil afterDelay:10];
+    }
+}
+
+-(void)weatherfailedLoad{
+    if (self.remind) {
+        self.remind.title.text = @"加载失败";
+        [UIView animateWithDuration:1 animations:^{
+            self.remind.alpha = 0.1;
+        } completion:^(BOOL finished) {
+            [self.remind removeFromSuperview];
+            self.remind = nil;
+        }];
+    }
 }
 /*
 #pragma mark - Navigation

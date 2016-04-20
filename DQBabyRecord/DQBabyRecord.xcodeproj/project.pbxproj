@@ -100,6 +100,8 @@
 		B3955D3A1CBE95D000E6F9B1 /* MyCaseDao.m in Sources */ = {isa = PBXBuildFile; fileRef = B3955D281CBE95D000E6F9B1 /* MyCaseDao.m */; };
 		B3955D3B1CBE95D000E6F9B1 /* RecordDao.m in Sources */ = {isa = PBXBuildFile; fileRef = B3955D2A1CBE95D000E6F9B1 /* RecordDao.m */; };
 		B3955D3C1CBE95D000E6F9B1 /* RemindModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B3955D2D1CBE95D000E6F9B1 /* RemindModel.m */; };
+		B3FA78E61CC7AB88001C1372 /* DQRemindView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FA78E51CC7AB88001C1372 /* DQRemindView.m */; };
+		B3FA78E81CC7AB9F001C1372 /* DQRemindView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3FA78E71CC7AB9F001C1372 /* DQRemindView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -261,6 +263,9 @@
 		B3955D2A1CBE95D000E6F9B1 /* RecordDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordDao.m; sourceTree = "<group>"; };
 		B3955D2C1CBE95D000E6F9B1 /* RemindModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindModel.h; sourceTree = "<group>"; };
 		B3955D2D1CBE95D000E6F9B1 /* RemindModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindModel.m; sourceTree = "<group>"; };
+		B3FA78E41CC7AB88001C1372 /* DQRemindView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQRemindView.h; sourceTree = "<group>"; };
+		B3FA78E51CC7AB88001C1372 /* DQRemindView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQRemindView.m; sourceTree = "<group>"; };
+		B3FA78E71CC7AB9F001C1372 /* DQRemindView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQRemindView.xib; sourceTree = "<group>"; };
 		E05DED597496C5FA7D8C6E0E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EDFE7493C97BA473B399B799 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -460,6 +465,9 @@
 				B35A1CA11CBF413C000A7BFC /* MultiSelectButton.m */,
 				B35A1CA21CBF413C000A7BFC /* SquareRadioButton.h */,
 				B35A1CA31CBF413C000A7BFC /* SquareRadioButton.m */,
+				B3FA78E41CC7AB88001C1372 /* DQRemindView.h */,
+				B3FA78E51CC7AB88001C1372 /* DQRemindView.m */,
+				B3FA78E71CC7AB9F001C1372 /* DQRemindView.xib */,
 			);
 			path = uiview;
 			sourceTree = "<group>";
@@ -778,6 +786,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3FA78E81CC7AB9F001C1372 /* DQRemindView.xib in Resources */,
 				B35A1C7A1CBF40C2000A7BFC /* HospitalMapKitViewController.xib in Resources */,
 				B35A1CE31CBF41D5000A7BFC /* UMSCommentDetailController.xib in Resources */,
 				B35A1C741CBF40C2000A7BFC /* DQShowFirstViewController.xib in Resources */,
@@ -906,6 +915,7 @@
 				B3955D3B1CBE95D000E6F9B1 /* RecordDao.m in Sources */,
 				B3955D361CBE95D000E6F9B1 /* BabyDao.m in Sources */,
 				B3955D351CBE95D000E6F9B1 /* MyAnnotation.m in Sources */,
+				B3FA78E61CC7AB88001C1372 /* DQRemindView.m in Sources */,
 				B35A1CDD1CBF41D5000A7BFC /* ImageHelper.m in Sources */,
 				B35A1C6C1CBF40C2000A7BFC /* LeftDrawerSetViewController.m in Sources */,
 				B35A1CAE1CBF413C000A7BFC /* WeatherView.m in Sources */,
