@@ -51,14 +51,35 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 -(void)addHWRightClick{
-    self.model = [[HealthModel alloc] init];
-    self.model.name = [[NSUserDefaults standardUserDefaults] objectForKey:NOW_BABY];
-    self.model.date = [TimeHelper getNowTime];
-    self.model.height = self.height.text;
-    self.model.weight = self.weight.text;
-    [HealthDao save:self.model];
-    [[Singleton shareInstance].healthModelArray insertObject:self.model atIndex:0];
-    [self addHWLeftClick];
+    if (![self isIncludeEmpty]) {
+        self.model = [[HealthModel alloc] init];
+        self.model.name = [[NSUserDefaults standardUserDefaults] objectForKey:NOW_BABY];
+        self.model.date = [TimeHelper getNowTime];
+        self.model.height = self.height.text;
+        self.model.weight = self.weight.text;
+        [HealthDao save:self.model];
+        [[Singleton shareInstance].healthModelArray insertObject:self.model atIndex:0];
+        [self addHWLeftClick];
+    }else{
+        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"" message:@"请将记录填完整，不然宝贝会不开心的" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
+
+#pragma mark -
+#pragma mark 逻辑判断
+-(BOOL)isIncludeEmpty{
+    BOOL judge = NO;
+    if (self.height.text.length <= 0) {
+        judge = YES;
+    }
+    if (self.weight.text.length <= 0) {
+        judge = YES;
+    }
+    return judge;
+}
 @end

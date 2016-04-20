@@ -59,18 +59,26 @@
     }
 }
 -(void)addCaseRightClick{
-    if(!self.isEditing){
-        self.model = [[MyCaseModel alloc] init];
-        self.model.name = [[NSUserDefaults standardUserDefaults] objectForKey:NOW_BABY];
-        self.model.date = [TimeHelper getNowTime];
-        self.model.detail = self.textView.text;
-        [MyCaseDao save:self.model];
-        [[Singleton shareInstance].caseModelArray insertObject:self.model atIndex:0];
+    if (![self isIncludeEmpty]) {
+        if(!self.isEditing){
+            self.model = [[MyCaseModel alloc] init];
+            self.model.name = [[NSUserDefaults standardUserDefaults] objectForKey:NOW_BABY];
+            self.model.date = [TimeHelper getNowTime];
+            self.model.detail = self.textView.text;
+            [MyCaseDao save:self.model];
+            [[Singleton shareInstance].caseModelArray insertObject:self.model atIndex:0];
+        }else{
+            self.model.detail = self.textView.text;
+            [MyCaseDao updateMyCase:self.model];
+        }
+        [self addCaseLeftClick];
     }else{
-        self.model.detail = self.textView.text;
-        [MyCaseDao updateMyCase:self.model];
+        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"" message:@"请将记录填完整，不然宝贝会不开心的" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
     }
-    [self addCaseLeftClick];
 }
 
 #pragma mark 加载数据
@@ -95,6 +103,16 @@
     }else{
         self.placeHold.alpha = 0.0;
     }
+}
+
+#pragma mark -
+#pragma mark 逻辑判断
+-(BOOL)isIncludeEmpty{
+    BOOL judge = NO;
+    if (self.textView.text.length <= 0) {
+        judge = YES;
+    }
+    return judge;
 }
 
 @end

@@ -93,18 +93,26 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 -(void)addFirslRightClick{
-    self.model = [[FirstModel alloc] init];
-    self.model.title = self.firstTitle.text;
-    self.model.name = [[NSUserDefaults standardUserDefaults] objectForKey:NOW_BABY];
-    self.model.date = [TimeHelper getNowTime];
-    self.model.detail = self.detaeil.text;
-    self.model.image = self.imageString;
-    for (int i = 0 ; i < self.imageArray.count; i++) {
-        [ImageHelper saveImage:self.imageArray[i] withName:[self.imageString substringWithRange:NSMakeRange(14*i, 14)]];
+    if (![self isIncludeEmpty]) {
+        self.model = [[FirstModel alloc] init];
+        self.model.title = self.firstTitle.text;
+        self.model.name = [[NSUserDefaults standardUserDefaults] objectForKey:NOW_BABY];
+        self.model.date = [TimeHelper getNowTime];
+        self.model.detail = self.detaeil.text;
+        self.model.image = self.imageString;
+        for (int i = 0 ; i < self.imageArray.count; i++) {
+            [ImageHelper saveImage:self.imageArray[i] withName:[self.imageString substringWithRange:NSMakeRange(14*i, 14)]];
+        }
+        [FirstDao save:self.model];
+        [[Singleton shareInstance].firstModelArray insertObject:self.model atIndex:0];
+        [self addFirslLeftClick];
+    }else{
+        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"" message:@"请将记录填完整，不然宝贝会不开心的" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
     }
-    [FirstDao save:self.model];
-    [[Singleton shareInstance].firstModelArray insertObject:self.model atIndex:0];
-    [self addFirslLeftClick];
 }
 
 #pragma mark 加载数据
@@ -233,6 +241,17 @@
     [self.imageString deleteCharactersInRange:NSMakeRange(28, 14)];
     [self.imageArray removeObjectAtIndex:2];
 }
-
+#pragma mark -
+#pragma mark 逻辑判断
+-(BOOL)isIncludeEmpty{
+    BOOL judge = NO;
+    if (self.firstTitle.text.length <= 0) {
+        judge = YES;
+    }
+    if (self.detaeil.text.length <= 0) {
+        judge = YES;
+    }
+    return judge;
+}
 
 @end

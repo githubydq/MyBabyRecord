@@ -62,16 +62,24 @@
 }
 
 -(void)addImageRecordRightClick{
-    self.model = [[RecordModel alloc] init];
-    self.model.name = [[NSUserDefaults standardUserDefaults] objectForKey:NOW_BABY];
-    self.model.date = self.dateString;
-    self.model.detail = self.textView.text;
-    self.model.image = self.dateString;
-    [RecordDao save:self.model];
-    [ImageHelper saveImage:self.img withName:self.dateString];
-    [ImageHelper saveSmallImage:self.img withName:self.dateString];
-    [[Singleton shareInstance].recordModelArray insertObject:self.model atIndex:0];
-    [self addImageRecordLeftClick];
+    if (![self isIncludeEmpty]) {
+        self.model = [[RecordModel alloc] init];
+        self.model.name = [[NSUserDefaults standardUserDefaults] objectForKey:NOW_BABY];
+        self.model.date = self.dateString;
+        self.model.detail = self.textView.text;
+        self.model.image = self.dateString;
+        [RecordDao save:self.model];
+        [ImageHelper saveImage:self.img withName:self.dateString];
+        [ImageHelper saveSmallImage:self.img withName:self.dateString];
+        [[Singleton shareInstance].recordModelArray insertObject:self.model atIndex:0];
+        [self addImageRecordLeftClick];
+    }else{
+        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"" message:@"请将记录填完整，不然宝贝会不开心的" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 #pragma mark 初始化UI
@@ -148,5 +156,17 @@
     
 }
 
+#pragma mark -
+#pragma mark 逻辑判断
+-(BOOL)isIncludeEmpty{
+    BOOL judge = NO;
+    if (self.textView.text.length <= 0) {
+        judge = YES;
+    }
+    if (self.delete.isHidden) {
+        judge = YES;
+    }
+    return judge;
+}
 
 @end
