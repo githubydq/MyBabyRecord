@@ -47,7 +47,7 @@
 #pragma mark 加载数据
 -(void)loadData{
     NSArray * modelArray = [Singleton shareInstance].recordModelArray;
-    NSLog(@"----------*%ld",modelArray.count);
+//    NSLog(@"----------*%ld",modelArray.count);
     self.imageArray = [[NSMutableArray alloc]init];
     for (RecordModel * model in modelArray) {
         NSString * imagePath = [NSString stringWithFormat:@"%@/%@",IMG_PATH,model.image];

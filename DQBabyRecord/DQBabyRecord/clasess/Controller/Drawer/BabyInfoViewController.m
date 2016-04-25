@@ -60,7 +60,9 @@
 }
 
 -(void)babyInfoRightClick{
-    self.model.image = [TimeHelper getNowTime];
+    if (self.imgView.image) {
+        self.model.image = [TimeHelper getNowTime];
+    }
     [ImageHelper saveIconImag:self.imgView.image withName:self.model.image];
     [self.delegate saveModel:self.model];
     [self.navigationController popViewControllerAnimated:YES];

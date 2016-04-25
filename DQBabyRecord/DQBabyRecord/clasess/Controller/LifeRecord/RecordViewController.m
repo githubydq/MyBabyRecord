@@ -147,7 +147,7 @@ static NSString * const identify4 = @"recordview4cell";
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(recordHeadTapClick:)];
     [v addGestureRecognizer:tap];
     //添加选择
-    UIScrollView * sv = [[UIScrollView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - 100)/2.0, 64, 100, 150)];
+    UIScrollView * sv = [[UIScrollView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - 100)/2.0, 64, 100, 160)];
     sv.contentOffset = CGPointZero;
     sv.contentSize = CGSizeMake(100, 40*self.topListArray.count);
     sv.backgroundColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:0.8];
