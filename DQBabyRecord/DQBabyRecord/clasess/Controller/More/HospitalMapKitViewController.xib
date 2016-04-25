@@ -24,13 +24,22 @@
                 </mapView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udd-LI-Mg2">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="34" id="8CA-mZ-Cmg"/>
+                        <constraint firstAttribute="width" constant="34" id="8CA-mZ-Cmg">
+                            <variation key="widthClass=compact" constant="50"/>
+                        </constraint>
                         <constraint firstAttribute="height" constant="30" id="YIW-qM-duB"/>
                     </constraints>
                     <state key="normal" title=" 返回">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="8CA-mZ-Cmg"/>
@@ -55,7 +64,9 @@
                 <constraint firstItem="mEI-Le-GjK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GAA-LV-1i9"/>
                 <constraint firstAttribute="trailing" secondItem="mEI-Le-GjK" secondAttribute="trailing" id="Mun-Aw-ne4"/>
                 <constraint firstItem="mEI-Le-GjK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Phb-2i-NBH"/>
-                <constraint firstItem="Udd-LI-Mg2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="az9-8z-qXL"/>
+                <constraint firstItem="Udd-LI-Mg2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="az9-8z-qXL">
+                    <variation key="widthClass=compact" constant="30"/>
+                </constraint>
             </constraints>
             <variation key="default">
                 <mask key="subviews">

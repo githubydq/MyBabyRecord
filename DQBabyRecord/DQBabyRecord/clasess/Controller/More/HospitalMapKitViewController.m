@@ -12,6 +12,7 @@
 
 @interface HospitalMapKitViewController ()<MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *myMapView;
+
 @property(nonatomic,strong)CLLocationManager * lmanager;/**<位置管理*/
 @end
 
@@ -55,6 +56,7 @@
 #pragma mark -
 #pragma mark 初始化Map
 -(void)initMap{
+    
     //显示用户位置
     self.myMapView.showsUserLocation = YES;
     self.myMapView.delegate = self;
@@ -95,6 +97,27 @@
         }
     }];
     
+}
+
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
+    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+        return nil;
+    }
+    
+    
+    static NSString * reuseIdentifier = @"annotation";
+    MKAnnotationView * view = [[MKAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
+    if ([[annotation title] isEqualToString:self.model.name]) {
+        view.image = [UIImage imageNamed:@"hospital30x30"];
+    }
+    view.canShowCallout = YES;
+    return view;
+}
+
+//标注视图被选择时
+-(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view{
+    //
+    view.canShowCallout = YES;
 }
 
 
