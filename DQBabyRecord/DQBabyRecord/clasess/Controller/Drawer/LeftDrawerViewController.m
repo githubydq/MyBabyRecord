@@ -98,10 +98,12 @@
 #pragma mark -
 #pragma mark 宝贝信息修改
 - (IBAction)MyBabyClick:(id)sender {
-    BabyInfoViewController * babyinfo = [[BabyInfoViewController alloc] init];
-    babyinfo.delegate = self;
-    babyinfo.model = self.model;
-    [self pushVC:babyinfo animated:NO];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:NOW_BABY]) {
+        BabyInfoViewController * babyinfo = [[BabyInfoViewController alloc] init];
+        babyinfo.delegate = self;
+        babyinfo.model = self.model;
+        [self pushVC:babyinfo animated:NO];
+    }
 }
 -(void)saveModel:(BabyModel *)model{
     [BabyDao updateMajor:model];

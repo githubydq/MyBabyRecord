@@ -19,6 +19,7 @@
     self.navigationBar.barTintColor = [UIColor whiteColor];
     self.navigationBar.tintColor = [UIColor blackColor];
     
+    //标题颜色
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSForegroundColorAttributeName] = [UIColor blackColor];
     attrs[NSFontAttributeName] = [UIFont systemFontOfSize:18];

@@ -10,6 +10,7 @@
 #import <MMDrawerController.h>
 #import "LeftDrawerViewController.h"
 #import "MainViewController.h"
+#import "DQWelcomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,7 @@
 
 #pragma mark -
 #pragma mark 创建抽屉库
--(void)createDrawer{
+-(void)intoDrawer{
     MainViewController * center = [[MainViewController alloc] init];
     
     LeftDrawerViewController * left = [[LeftDrawerViewController alloc] init];
@@ -31,9 +32,18 @@
     self.window.rootViewController = drawer;
 }
 
+#pragma mark -
+#pragma mark appdelegate
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    [self createDrawer];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    DQWelcomeViewController * welcome = [[DQWelcomeViewController alloc] init];
+    NSString * bgImage = [NSString stringWithFormat:@"%@/welcomebg.jpg",[[NSBundle mainBundle] pathForResource:@"image" ofType:@"bundle"]];
+    [welcome mySetBackImage:[UIImage imageWithContentsOfFile:bgImage]];
+    self.window.rootViewController = welcome;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

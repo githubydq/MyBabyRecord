@@ -110,6 +110,12 @@
         BaseNavigationController * baseNav = [[BaseNavigationController alloc] initWithRootViewController:addMultiRecord];
         [self presentViewController:baseNav animated:NO completion:nil];
         
+    }else{
+        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"" message:@"请添加宝贝后再尝试添加宝贝记录" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
     }
 }
 

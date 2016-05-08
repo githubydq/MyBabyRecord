@@ -88,7 +88,7 @@
                 <outlet property="itemImage" destination="YIA-ac-TEb" id="Mee-LH-gBU"/>
                 <outlet property="itemLabel" destination="p4H-Sd-BXz" id="dhs-um-2l1"/>
             </connections>
-            <point key="canvasLocation" x="276" y="192"/>
+            <point key="canvasLocation" x="126" y="107"/>
         </view>
     </objects>
 </document>

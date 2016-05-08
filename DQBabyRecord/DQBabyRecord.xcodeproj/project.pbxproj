@@ -10,6 +10,9 @@
 		3003D9ED4B439C4441C9603F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D2DD2BEDF5203F5B5E237 /* libPods.a */; };
 		B307FAE91CC28F3700BCC491 /* addd.xib in Resources */ = {isa = PBXBuildFile; fileRef = B307FAE81CC28F3700BCC491 /* addd.xib */; };
 		B32AE4BE1CBEA09A00E9ED91 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B32AE4BD1CBEA09A00E9ED91 /* Info.plist */; };
+		B357C8C21CDFA8060013DF7B /* DQWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B357C8C01CDFA8060013DF7B /* DQWelcomeViewController.m */; };
+		B357C8C31CDFA8060013DF7B /* DQWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B357C8C11CDFA8060013DF7B /* DQWelcomeViewController.xib */; };
+		B357C8C61CDFB7820013DF7B /* image.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B357C8C51CDFB7820013DF7B /* image.bundle */; };
 		B35A1C5D1CBF40C2000A7BFC /* AddCaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C261CBF40C2000A7BFC /* AddCaseViewController.m */; };
 		B35A1C5E1CBF40C2000A7BFC /* AddCaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C271CBF40C2000A7BFC /* AddCaseViewController.xib */; };
 		B35A1C5F1CBF40C2000A7BFC /* AddFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C291CBF40C2000A7BFC /* AddFirstViewController.m */; };
@@ -111,6 +114,10 @@
 		B307FAE81CC28F3700BCC491 /* addd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addd.xib; sourceTree = "<group>"; };
 		B32AE4BC1CBE9E8900E9ED91 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B32AE4BD1CBEA09A00E9ED91 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B357C8BF1CDFA8060013DF7B /* DQWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQWelcomeViewController.h; sourceTree = "<group>"; };
+		B357C8C01CDFA8060013DF7B /* DQWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQWelcomeViewController.m; sourceTree = "<group>"; };
+		B357C8C11CDFA8060013DF7B /* DQWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQWelcomeViewController.xib; sourceTree = "<group>"; };
+		B357C8C51CDFB7820013DF7B /* image.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = image.bundle; sourceTree = "<group>"; };
 		B35A1C251CBF40C2000A7BFC /* AddCaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCaseViewController.h; sourceTree = "<group>"; };
 		B35A1C261CBF40C2000A7BFC /* AddCaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCaseViewController.m; sourceTree = "<group>"; };
 		B35A1C271CBF40C2000A7BFC /* AddCaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCaseViewController.xib; sourceTree = "<group>"; };
@@ -303,6 +310,24 @@
 				831D2DD2BEDF5203F5B5E237 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B357C8BE1CDFA7CD0013DF7B /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				B357C8BF1CDFA8060013DF7B /* DQWelcomeViewController.h */,
+				B357C8C01CDFA8060013DF7B /* DQWelcomeViewController.m */,
+				B357C8C11CDFA8060013DF7B /* DQWelcomeViewController.xib */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		B357C8C41CDFB76D0013DF7B /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				B357C8C51CDFB7820013DF7B /* image.bundle */,
+			);
+			path = Resourse;
 			sourceTree = "<group>";
 		};
 		B35A1C241CBF40C2000A7BFC /* AddRecord */ = {
@@ -597,6 +622,7 @@
 				B3955D0B1CBE95D000E6F9B1 /* clasess */,
 				B3955CF81CBE94A400E6F9B1 /* AppDelegate */,
 				B32AE4BD1CBEA09A00E9ED91 /* Info.plist */,
+				B357C8C41CDFB76D0013DF7B /* Resourse */,
 				B3955CE11CBE918F00E6F9B1 /* Supporting Files */,
 			);
 			path = DQBabyRecord;
@@ -641,6 +667,7 @@
 		B3955D0C1CBE95D000E6F9B1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B357C8BE1CDFA7CD0013DF7B /* Welcome */,
 				B35A1C371CBF40C2000A7BFC /* Drawer */,
 				B35A1C461CBF40C2000A7BFC /* LifeRecord */,
 				B35A1C241CBF40C2000A7BFC /* AddRecord */,
@@ -802,6 +829,7 @@
 				B35A1CE61CBF41D5000A7BFC /* UMShareEditViewController.xib in Resources */,
 				B35A1C5E1CBF40C2000A7BFC /* AddCaseViewController.xib in Resources */,
 				B307FAE91CC28F3700BCC491 /* addd.xib in Resources */,
+				B357C8C61CDFB7820013DF7B /* image.bundle in Resources */,
 				B35A1CA51CBF413C000A7BFC /* AddRecordChoiceItem.xib in Resources */,
 				B35A1C6F1CBF40C2000A7BFC /* LeftDrawerViewController.xib in Resources */,
 				B35A1C7E1CBF40C2000A7BFC /* WeatherViewController.xib in Resources */,
@@ -832,6 +860,7 @@
 				B35A1D1F1CC11806000A7BFC /* DQManageBabyViewController.xib in Resources */,
 				B35A1C7C1CBF40C2000A7BFC /* MoreViewController.xib in Resources */,
 				B35A1C6D1CBF40C2000A7BFC /* LeftDrawerSetViewController.xib in Resources */,
+				B357C8C31CDFA8060013DF7B /* DQWelcomeViewController.xib in Resources */,
 				B35A1CE71CBF41D5000A7BFC /* UMShareEditViewControlleriPad.xib in Resources */,
 				B35A1C721CBF40C2000A7BFC /* DQShowFirstImageViewController.xib in Resources */,
 				B35A1CE81CBF41D5000A7BFC /* UMSLoginViewController.xib in Resources */,
@@ -915,6 +944,7 @@
 				B35A1C611CBF40C2000A7BFC /* AddHWViewController.m in Sources */,
 				B35A1C751CBF40C2000A7BFC /* RecordViewController.m in Sources */,
 				B3955D341CBE95D000E6F9B1 /* HospitalModel.m in Sources */,
+				B357C8C21CDFA8060013DF7B /* DQWelcomeViewController.m in Sources */,
 				B35A1C701CBF40C2000A7BFC /* MainViewController.m in Sources */,
 				B35A1CF21CBF4E00000A7BFC /* DQFirstCollectionViewCell.m in Sources */,
 				B35A1CE01CBF41D5000A7BFC /* WaterflowLayout.m in Sources */,
