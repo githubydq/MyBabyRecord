@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3003D9ED4B439C4441C9603F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D2DD2BEDF5203F5B5E237 /* libPods.a */; };
-		B307FAE91CC28F3700BCC491 /* addd.xib in Resources */ = {isa = PBXBuildFile; fileRef = B307FAE81CC28F3700BCC491 /* addd.xib */; };
 		B32AE4BE1CBEA09A00E9ED91 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B32AE4BD1CBEA09A00E9ED91 /* Info.plist */; };
+		B3527DEA1CE0B3E600C59DBC /* DQAddBabyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3527DE81CE0B3E600C59DBC /* DQAddBabyViewController.m */; };
+		B3527DEB1CE0B3E600C59DBC /* DQAddBabyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3527DE91CE0B3E600C59DBC /* DQAddBabyViewController.xib */; };
 		B357C8C21CDFA8060013DF7B /* DQWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B357C8C01CDFA8060013DF7B /* DQWelcomeViewController.m */; };
 		B357C8C31CDFA8060013DF7B /* DQWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B357C8C11CDFA8060013DF7B /* DQWelcomeViewController.xib */; };
 		B357C8C61CDFB7820013DF7B /* image.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B357C8C51CDFB7820013DF7B /* image.bundle */; };
@@ -49,7 +50,6 @@
 		B35A1CA51CBF413C000A7BFC /* AddRecordChoiceItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C821CBF413C000A7BFC /* AddRecordChoiceItem.xib */; };
 		B35A1CA61CBF413C000A7BFC /* RecordCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C851CBF413C000A7BFC /* RecordCollectionViewCell.m */; };
 		B35A1CA71CBF413C000A7BFC /* RecordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C861CBF413C000A7BFC /* RecordCollectionViewCell.xib */; };
-		B35A1CA91CBF413C000A7BFC /* AddBabyView.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C8B1CBF413C000A7BFC /* AddBabyView.m */; };
 		B35A1CAA1CBF413C000A7BFC /* RemindTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C8E1CBF413C000A7BFC /* RemindTableViewCell.m */; };
 		B35A1CAB1CBF413C000A7BFC /* RemindTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35A1C8F1CBF413C000A7BFC /* RemindTableViewCell.xib */; };
 		B35A1CAC1CBF413C000A7BFC /* CircumHospitalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A1C921CBF413C000A7BFC /* CircumHospitalTableViewCell.m */; };
@@ -111,9 +111,11 @@
 
 /* Begin PBXFileReference section */
 		831D2DD2BEDF5203F5B5E237 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B307FAE81CC28F3700BCC491 /* addd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addd.xib; sourceTree = "<group>"; };
 		B32AE4BC1CBE9E8900E9ED91 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B32AE4BD1CBEA09A00E9ED91 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3527DE71CE0B3E600C59DBC /* DQAddBabyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQAddBabyViewController.h; sourceTree = "<group>"; };
+		B3527DE81CE0B3E600C59DBC /* DQAddBabyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQAddBabyViewController.m; sourceTree = "<group>"; };
+		B3527DE91CE0B3E600C59DBC /* DQAddBabyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQAddBabyViewController.xib; sourceTree = "<group>"; };
 		B357C8BF1CDFA8060013DF7B /* DQWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQWelcomeViewController.h; sourceTree = "<group>"; };
 		B357C8C01CDFA8060013DF7B /* DQWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQWelcomeViewController.m; sourceTree = "<group>"; };
 		B357C8C11CDFA8060013DF7B /* DQWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQWelcomeViewController.xib; sourceTree = "<group>"; };
@@ -173,8 +175,6 @@
 		B35A1C841CBF413C000A7BFC /* RecordCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordCollectionViewCell.h; sourceTree = "<group>"; };
 		B35A1C851CBF413C000A7BFC /* RecordCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordCollectionViewCell.m; sourceTree = "<group>"; };
 		B35A1C861CBF413C000A7BFC /* RecordCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordCollectionViewCell.xib; sourceTree = "<group>"; };
-		B35A1C8A1CBF413C000A7BFC /* AddBabyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBabyView.h; sourceTree = "<group>"; };
-		B35A1C8B1CBF413C000A7BFC /* AddBabyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBabyView.m; sourceTree = "<group>"; };
 		B35A1C8D1CBF413C000A7BFC /* RemindTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindTableViewCell.h; sourceTree = "<group>"; };
 		B35A1C8E1CBF413C000A7BFC /* RemindTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindTableViewCell.m; sourceTree = "<group>"; };
 		B35A1C8F1CBF413C000A7BFC /* RemindTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemindTableViewCell.xib; sourceTree = "<group>"; };
@@ -318,6 +318,9 @@
 				B357C8BF1CDFA8060013DF7B /* DQWelcomeViewController.h */,
 				B357C8C01CDFA8060013DF7B /* DQWelcomeViewController.m */,
 				B357C8C11CDFA8060013DF7B /* DQWelcomeViewController.xib */,
+				B3527DE71CE0B3E600C59DBC /* DQAddBabyViewController.h */,
+				B3527DE81CE0B3E600C59DBC /* DQAddBabyViewController.m */,
+				B3527DE91CE0B3E600C59DBC /* DQAddBabyViewController.xib */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -450,16 +453,6 @@
 				B35A1D0E1CBFE6F0000A7BFC /* DQCaseCollectionViewCell.xib */,
 			);
 			path = collectionViewCells;
-			sourceTree = "<group>";
-		};
-		B35A1C871CBF413C000A7BFC /* initAddBabyView */ = {
-			isa = PBXGroup;
-			children = (
-				B35A1C8A1CBF413C000A7BFC /* AddBabyView.h */,
-				B35A1C8B1CBF413C000A7BFC /* AddBabyView.m */,
-				B307FAE81CC28F3700BCC491 /* addd.xib */,
-			);
-			path = initAddBabyView;
 			sourceTree = "<group>";
 		};
 		B35A1C8C1CBF413C000A7BFC /* LeftDrawer */ = {
@@ -749,7 +742,6 @@
 			children = (
 				B35A1C7F1CBF413C000A7BFC /* AddRecord */,
 				B35A1C831CBF413C000A7BFC /* collectionViewCells */,
-				B35A1C871CBF413C000A7BFC /* initAddBabyView */,
 				B35A1C8C1CBF413C000A7BFC /* LeftDrawer */,
 				B35A1C901CBF413C000A7BFC /* More */,
 				B35A1C961CBF413C000A7BFC /* tableViewCells */,
@@ -828,10 +820,10 @@
 				B35A1D151CC0A05F000A7BFC /* DQShowImageViewController.xib in Resources */,
 				B35A1CE61CBF41D5000A7BFC /* UMShareEditViewController.xib in Resources */,
 				B35A1C5E1CBF40C2000A7BFC /* AddCaseViewController.xib in Resources */,
-				B307FAE91CC28F3700BCC491 /* addd.xib in Resources */,
 				B357C8C61CDFB7820013DF7B /* image.bundle in Resources */,
 				B35A1CA51CBF413C000A7BFC /* AddRecordChoiceItem.xib in Resources */,
 				B35A1C6F1CBF40C2000A7BFC /* LeftDrawerViewController.xib in Resources */,
+				B3527DEB1CE0B3E600C59DBC /* DQAddBabyViewController.xib in Resources */,
 				B35A1C7E1CBF40C2000A7BFC /* WeatherViewController.xib in Resources */,
 				B35A1CAB1CBF413C000A7BFC /* RemindTableViewCell.xib in Resources */,
 				B35A1CEA1CBF41D5000A7BFC /* UMSShareListController.xib in Resources */,
@@ -933,7 +925,6 @@
 				B35A1CDF1CBF41D5000A7BFC /* TimeHelper.m in Sources */,
 				B35A1C5D1CBF40C2000A7BFC /* AddCaseViewController.m in Sources */,
 				B35A1CA41CBF413C000A7BFC /* AddRecordChoiceItem.m in Sources */,
-				B35A1CA91CBF413C000A7BFC /* AddBabyView.m in Sources */,
 				B35A1D141CC0A05F000A7BFC /* DQShowImageViewController.m in Sources */,
 				B35A1C651CBF40C2000A7BFC /* AddMultiRecordViewController.m in Sources */,
 				B35A1C731CBF40C2000A7BFC /* DQShowFirstViewController.m in Sources */,
@@ -945,6 +936,7 @@
 				B35A1C751CBF40C2000A7BFC /* RecordViewController.m in Sources */,
 				B3955D341CBE95D000E6F9B1 /* HospitalModel.m in Sources */,
 				B357C8C21CDFA8060013DF7B /* DQWelcomeViewController.m in Sources */,
+				B3527DEA1CE0B3E600C59DBC /* DQAddBabyViewController.m in Sources */,
 				B35A1C701CBF40C2000A7BFC /* MainViewController.m in Sources */,
 				B35A1CF21CBF4E00000A7BFC /* DQFirstCollectionViewCell.m in Sources */,
 				B35A1CE01CBF41D5000A7BFC /* WaterflowLayout.m in Sources */,

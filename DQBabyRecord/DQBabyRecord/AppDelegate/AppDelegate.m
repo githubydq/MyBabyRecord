@@ -12,6 +12,8 @@
 #import "MainViewController.h"
 #import "DQWelcomeViewController.h"
 
+#import "DQAddBabyViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -38,10 +40,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    DQWelcomeViewController * welcome = [[DQWelcomeViewController alloc] init];
-    NSString * bgImage = [NSString stringWithFormat:@"%@/welcomebg.jpg",[[NSBundle mainBundle] pathForResource:@"image" ofType:@"bundle"]];
-    [welcome mySetBackImage:[UIImage imageWithContentsOfFile:bgImage]];
-    self.window.rootViewController = welcome;
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:NOW_BABY]) {
+        [self intoDrawer];
+    }else{
+        DQAddBabyViewController * addBaby = [[DQAddBabyViewController alloc] init];
+        addBaby.isWelcome = YES;
+        self.window.rootViewController = addBaby;
+    }
     
     [self.window makeKeyAndVisible];
     return YES;

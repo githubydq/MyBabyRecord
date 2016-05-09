@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DQAddBabyViewController">
+            <connections>
+                <outlet property="birthTextF" destination="zUr-xk-4Po" id="QCn-NB-8VL"/>
+                <outlet property="myTitle" destination="rMq-GR-ZJ0" id="FOD-JM-eYA"/>
+                <outlet property="nameTextF" destination="83O-4X-NKp" id="JJK-Y2-3TJ"/>
+                <outlet property="sexTextF" destination="rxK-Oq-t6A" id="glQ-UO-TBx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="welcomeBtn" destination="zna-k6-gSt" id="dj2-VQ-bcD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请添加宝贝的信息吧" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMq-GR-ZJ0">
+                    <rect key="frame" x="0.0" y="64" width="375" height="97"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="97" id="0hs-16-7He"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zna-k6-gSt">
+                    <rect key="frame" x="140" y="547" width="96" height="30"/>
+                    <color key="backgroundColor" red="0.95908239689613817" green="0.98417468606747593" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="96" id="9wc-Ua-8wO"/>
+                        <constraint firstAttribute="height" constant="30" id="kmL-UL-buV"/>
+                    </constraints>
+                    <state key="normal" title="开始进入">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksTobounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="welcomeClick:" destination="-1" eventType="touchUpInside" id="W5h-d2-Guz"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvV-ZA-lAq">
+                    <rect key="frame" x="103" y="243" width="70" height="25"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出生日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHc-We-pGH">
+                    <rect key="frame" x="103" y="333" width="70" height="25"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入姓名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="83O-4X-NKp">
+                    <rect key="frame" x="198" y="243" width="120" height="25"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入性别" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rxK-Oq-t6A" userLabel="sex">
+                    <rect key="frame" x="198" y="288" width="120" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="JJg-gL-d42"/>
+                        <constraint firstAttribute="width" constant="120" id="bTC-gf-A7F"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入出生日期" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zUr-xk-4Po">
+                    <rect key="frame" x="198" y="333" width="120" height="25"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="性别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMQ-xY-vij">
+                    <rect key="frame" x="103" y="288" width="70" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="QVX-oe-9Ed"/>
+                        <constraint firstAttribute="height" constant="25" id="nq6-rz-iQG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.66570173273734068" green="0.73523018464891543" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="jMQ-xY-vij" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-50" id="0oc-Br-Sip"/>
+                <constraint firstItem="zUr-xk-4Po" firstAttribute="height" secondItem="rxK-Oq-t6A" secondAttribute="height" id="2Jz-Uq-hGL"/>
+                <constraint firstItem="HHc-We-pGH" firstAttribute="centerX" secondItem="jMQ-xY-vij" secondAttribute="centerX" id="4aL-co-G3i"/>
+                <constraint firstItem="zUr-xk-4Po" firstAttribute="width" secondItem="rxK-Oq-t6A" secondAttribute="width" id="4c9-lh-p1G"/>
+                <constraint firstItem="NvV-ZA-lAq" firstAttribute="centerX" secondItem="jMQ-xY-vij" secondAttribute="centerX" id="77r-St-Mlk"/>
+                <constraint firstAttribute="bottom" secondItem="zna-k6-gSt" secondAttribute="bottom" constant="23" id="Gcb-K1-u7M"/>
+                <constraint firstItem="HHc-We-pGH" firstAttribute="width" secondItem="jMQ-xY-vij" secondAttribute="width" id="Gog-S1-7Sl"/>
+                <constraint firstItem="NvV-ZA-lAq" firstAttribute="height" secondItem="jMQ-xY-vij" secondAttribute="height" id="IbR-oO-asc"/>
+                <constraint firstItem="rxK-Oq-t6A" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="70" id="Ifz-Tl-cn6"/>
+                <constraint firstItem="83O-4X-NKp" firstAttribute="height" secondItem="rxK-Oq-t6A" secondAttribute="height" id="KM4-R7-7xW"/>
+                <constraint firstItem="rMq-GR-ZJ0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="M7X-St-SO7"/>
+                <constraint firstItem="zUr-xk-4Po" firstAttribute="top" secondItem="rxK-Oq-t6A" secondAttribute="bottom" constant="20" id="R8b-hm-sKg"/>
+                <constraint firstItem="zUr-xk-4Po" firstAttribute="centerX" secondItem="rxK-Oq-t6A" secondAttribute="centerX" id="T2w-Md-kyu"/>
+                <constraint firstItem="HHc-We-pGH" firstAttribute="height" secondItem="jMQ-xY-vij" secondAttribute="height" id="XAS-G9-Cop"/>
+                <constraint firstItem="NvV-ZA-lAq" firstAttribute="width" secondItem="jMQ-xY-vij" secondAttribute="width" id="bGh-3u-V18"/>
+                <constraint firstItem="NvV-ZA-lAq" firstAttribute="bottom" secondItem="jMQ-xY-vij" secondAttribute="top" constant="-20" id="eti-qb-8up"/>
+                <constraint firstItem="HHc-We-pGH" firstAttribute="top" secondItem="jMQ-xY-vij" secondAttribute="bottom" constant="20" id="gxc-Y5-0tA"/>
+                <constraint firstItem="jMQ-xY-vij" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="lSF-ai-68Q"/>
+                <constraint firstItem="83O-4X-NKp" firstAttribute="bottom" secondItem="rxK-Oq-t6A" secondAttribute="top" constant="-20" id="nX7-nX-CxZ"/>
+                <constraint firstItem="rMq-GR-ZJ0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pw1-lC-y5U"/>
+                <constraint firstItem="zna-k6-gSt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qjr-FP-ELY"/>
+                <constraint firstItem="rxK-Oq-t6A" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="rup-wX-1cx"/>
+                <constraint firstItem="83O-4X-NKp" firstAttribute="centerX" secondItem="rxK-Oq-t6A" secondAttribute="centerX" id="uPn-IO-5vo"/>
+                <constraint firstAttribute="trailing" secondItem="rMq-GR-ZJ0" secondAttribute="trailing" id="w7f-vP-mtn"/>
+                <constraint firstItem="83O-4X-NKp" firstAttribute="width" secondItem="rxK-Oq-t6A" secondAttribute="width" id="yMS-xK-bl4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="x5d-jK-d8I" appends="YES" id="kQh-pL-Jj7"/>
+            </connections>
+            <point key="canvasLocation" x="258.5" y="332"/>
+        </view>
+        <tapGestureRecognizer id="x5d-jK-d8I">
+            <connections>
+                <action selector="backClick:" destination="-1" id="oPn-si-O4l"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

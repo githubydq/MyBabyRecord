@@ -10,13 +10,9 @@
 #import "RecordViewController.h"
 #import "MoreViewController.h"
 
-#import "AddBabyView.h"
-#import "BabyDao.h"
-#import "BabyModel.h"
-
 #import "AddMultiRecordViewController.h"
 
-@interface MainViewController ()<UITabBarControllerDelegate,AddBabyViewDelegate>
+@interface MainViewController ()<UITabBarControllerDelegate>
 {
     NSArray * _VCNameArray;
     NSArray * _TabbarTitle;
@@ -44,36 +40,10 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self configBaby];
+//    [self configBaby];
     
 }
 
-#pragma mark -
-#pragma mark 添加宝贝
-
-/** 是否至少有一个宝贝 */
--(void)configBaby{
-    NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
-    NSString * baby = [user objectForKey:NOW_BABY];
-    if (!baby) {
-        NSLog(@"no baby");
-        AddBabyView * v = [[[NSBundle mainBundle] loadNibNamed:@"addd" owner:self options:nil] lastObject];
-        v.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-        v.delegate = self;
-        [[UIApplication sharedApplication].keyWindow addSubview:v];
-    }
-}
-
--(void)addBabyView:(AddBabyView *)view CompleteAndName:(NSString *)name Sex:(NSString *)sex Birthday:(NSString *)birthday{
-    
-    [view removeFromSuperview];
-    BabyModel * model = [[BabyModel alloc] init];
-    model.name = name;
-    model.sex = sex;
-    model.birthday = birthday;
-    [BabyDao save:model];
-    [[NSUserDefaults standardUserDefaults] setObject:name forKey:NOW_BABY];
-}
 
 #pragma mark -
 #pragma mark 初始化UI

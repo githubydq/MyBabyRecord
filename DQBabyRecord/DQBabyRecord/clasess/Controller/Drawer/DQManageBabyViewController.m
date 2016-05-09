@@ -7,7 +7,7 @@
 //
 
 #import "DQManageBabyViewController.h"
-#import "AddBabyView.h"
+#import "DQAddBabyViewController.h"
 #import "BabyDao.h"
 #import "BabyModel.h"
 #import "RecordDao.h"
@@ -15,10 +15,12 @@
 #import "HealthDao.h"
 #import "MyCaseDao.h"
 
-@interface DQManageBabyViewController ()<UITableViewDataSource,UITableViewDelegate,AddBabyViewDelegate>
+@interface DQManageBabyViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *myTable;
 
 @property(nonatomic,strong)NSMutableArray * modelArray;
+
+@property(nonatomic,assign)BOOL isAddBaby;
 @end
 
 @implementation DQManageBabyViewController
@@ -32,10 +34,26 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if (self.isAddBaby) {
+        [self loadData];
+        [self.myTable reloadData];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(BOOL)isAddBaby{
+    if (!_isAddBaby) {
+        _isAddBaby = NO;
+    }
+    return _isAddBaby;
+}
+
 #pragma mark -
 #pragma mark 初始化UI
 -(void)configUI{
@@ -43,11 +61,14 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"添加宝贝" style:UIBarButtonItemStylePlain target:self action:@selector(manageBabyRightClick)];
 }
 -(void)manageBabyRightClick{
-    AddBabyView * v = [[[NSBundle mainBundle] loadNibNamed:@"addd" owner:self options:nil] lastObject];
-    v.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-    v.delegate = self;
-//    v.backgroundColor = [UIColor blackColor];
-    [[UIApplication sharedApplication].keyWindow addSubview:v];
+    DQAddBabyViewController * addBaby = [[DQAddBabyViewController alloc] init];
+    addBaby.isWelcome = NO;
+    [addBaby.navigationItem.backBarButtonItem setTitle:@"返回"];
+    __block DQManageBabyViewController * BlockSelf = self;
+    addBaby.block = ^(BOOL isAddbaby){
+        BlockSelf.isAddBaby = isAddbaby;
+    };
+    [self.navigationController pushViewController:addBaby animated:NO];
 }
 
 #pragma mark -
@@ -112,17 +133,5 @@
     [[Singleton shareInstance].caseModelArray removeAllObjects];
 }
 
-#pragma mark -
-#pragma mark addbabyview delegate
--(void)addBabyView:(AddBabyView *)view CompleteAndName:(NSString *)name Sex:(NSString *)sex Birthday:(NSString *)birthday{
-    [view removeFromSuperview];
-    BabyModel * model = [[BabyModel alloc] init];
-    model.name = name;
-    model.sex = sex;
-    model.birthday = birthday;
-    [BabyDao save:model];
-    [self.modelArray addObject:model];
-    [self.myTable reloadData];
-}
 
 @end
